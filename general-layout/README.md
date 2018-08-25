@@ -70,12 +70,11 @@
 
 ![Input filters](figures/InputFilter.png)
 
-*   **Import Regexp:** You can view the Regular Expression rules, which modify the data that can be entered into the system. This can and should be used to help filter out personal information from automatic imports (such as removing the username from windows file paths), having unified representation for certain common values for easier correlation or simply standardizing certain input. It is also possible to block certain values from being inserted. As a site administrator or a user with regex permission, you can also edit these rules.
+*   **Import Regexp:** สามารถดูกฎของ regular expression ที่ควบคุมข้อมูลที่สามารถป้อนลงในระบบ ที่สามารถและควรใช้เพื่อช่วยกรองข้อมูลส่วนบุคคลจากการนำเข้าโดยอัตโนมัติ (เช่น ข้อมูลของผู้ในงานบน Windows)  นอกจากนี้ยังสามารถบล็อกค่าบางค่าจากการเพิ่มข้อมูล 
 
-*   **Signature Whitelist:** You can view the whitelist rules, which contains the values that are blocked from being used for exports and automation on this instance. Site administrators have access to editing this list.
+*   **Signature Whitelist:** ดูกฎรายการที่อนุญาตพิเศษ ซึ่งมีค่าที่บล็อกผู้ใช้สำหรับการส่งออกข้อมูลและระบบอัตโนมัติ ผู้ดูแลไซต์สามารถเข้าถึงและแก้ไขรายการนี้ได้
 
-*  **List Warninglists:**
-MISP warninglists are lists of well-known indicators that can be associated to potential false positives, errors or mistakes. The warning lists are integrated in MISP to display an info/warning box at the event and attribute level.
+*  **List Warninglists:** รายการเฝ้าระวัง คือรายการของตัวบ่งชี้ที่รู้จักกันดีซึ่งสามารถเชื่อมโยงกับสิ่งที่คาดว่าอาจผิดพลาดได้ รายการคำเตือนนี้จะแสดงในกลองเหตุการณ์ และระดับแอตทริบิวต์
 
 ##### Global Actions
 
