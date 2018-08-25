@@ -36,16 +36,17 @@
 
 *   **Log out:** ออกจากระบบ.
 
-### A list of the contents of each of the above drop-down menus
+### รายการในชุดเมนูแบบเลื่อนลง
 
 ##### Event actions
 
 ![List Event Actions](figures/EventActions.jpg)
-*   **List Events:** Lists all the events in the system that are not private or belong to your organisation. You can add, modify, delete, publish or view individual events from this view.
+*   **List Events:** 
+แสดงเหตุการณ์ทั้งหมดในระบบโดยไม่มีการกรองความเป็นส่วนตัวหรือหน่วยงานใด สามารถเพิ่ม แก้ไข ลบ เผยแพร่ หรือดูรายละเอียดของแต่ละเหตุการณ์ได้ที่เมนูนี้
 
-*   **Add Event:** Allows you to fill out an event creation form and create the event object, which you can start adding attributes.
+*   **Add Event:** อนุญาตให้กรอกแบบฟอร์มการสร้างกิจกรรม และสร้างอ็อบเจ็กต์เหตุการณ์ ก่อนจะเริ่มต้นเพิ่มแอตทริบิวต์
 
-*   **List Attributes:** Lists all the attributes in the system that are not private or belong to your organisation. You can modify, delete or view each individual attribute from this view.
+*   **List Attributes:** แสดงรายการแอตทริบิวต์ทั้งหมดโดยไม่มีการกรองความเป็นส่วนตัวหรือหน่วยงานใด สามารถเพิ่ม แก้ไข ลบ เผยแพร่ หรือดูรายละเอียดของแต่ละแอตทริบิวต์ได้ที่ส่วนนี้
 
 *   **Search Attributes:** You can set search terms for a filtered attribute index view here.
 
