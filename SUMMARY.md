@@ -4,7 +4,7 @@
 * [Book Convention](book-convention/README.md)
 * [Quick Start](quick-start/README.md)
 * [Get Your Instance](get-your-instance/README.md)
-* [รูปแบบ](general-layout/README.md)
+* [มุมมองทั่วไป](general-layout/README.md)
 * [แนวคิด](general-concepts/README.md)
 * [User Management and Global Actions](user-management/README.md)
 * [Using the System](using-the-system/README.md)

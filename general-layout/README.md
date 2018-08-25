@@ -1,10 +1,10 @@
 <!-- Nothing else matters -->
 
-## General Layout
+## มุมมองทั่วไป
 
-### The top bar
+### เมนูหลัก
 
-#### Simple User
+#### มุมมองผู้ใช้งาน
 ![This is the main menu that will be accessible from all of the views. In some instances, some additional buttons that will appear on top of these when a view provides it.](figures/MenuBarUser.jpg)<br>
 เมนูนี้มีฟังก์ชันหลักทั้งหมดของแอปพลิเคชันเป็นชุดเมนูแบบเลื่อนลง ซึ่งประกอบไปด้วยฟังก์ชันย่อยๆ ที่ถูกจัดเป็นหมวดหมู่ดังต่อไปนี้
 
