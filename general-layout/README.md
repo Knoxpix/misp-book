@@ -5,13 +5,13 @@
 ### The top bar
 
 #### Simple User
-![This is the main menu that will be accessible from all of the views. In some instances, some additional buttons that will appear on top of these when a view provides it.](figures/MenuBarUser.jpg)
-
+![This is the main menu that will be accessible from all of the views. In some instances, some additional buttons that will appear on top of these when a view provides it.](figures/MenuBarUser.jpg)<br>
 เมนูนี้มีฟังก์ชันหลักทั้งหมดของแอปพลิเคชันเป็นชุดเมนูแบบเลื่อนลง ซึ่งประกอบไปด้วยฟังก์ชันย่อยๆ ที่ถูกจัดเป็นหมวดหมู่ดังต่อไปนี้
 
 *   **Home button:** ปุ่มนี้จะกลับไปยังหน้าจอเริ่มต้นของแอ็พพลิเคชัน
 *   **Event Actions:** เมนูของเหตุการณ์ ช่วยให้สามารถเข้าถึงฟังก์ชันทั้งหมดที่เกี่ยวข้องกับการสร้าง แก้ไข ลบ แผยแพร่ ค้นหา และแสดงเหตุการณ์และแอ็ตทริบิวต์.
-*   **Input Filters:** Input filters alter what and how data can be entered into this instance. Apart from the basic validation of attribute entry by type, it is possible for the site administrators to define regular expression replacements and blacklists for certain values in addition to blocking certain values from being exportable. Users can view these replacement and blacklist rules here whilst administrator can alter them.
+*   **Input Filters:** ตัวกรองการนำเข้าข้อมูล เป็นส่วนที่จะบอกว่าข้อมูลอะไรจะนำเข้าได้ หรือจะนำเข้าข้อมูลได้อย่างไร<br>
+นอกเหนือจากการตรวจสอบความถูกต้องเบื้องต้นของการระบุแอตทริบิวต์ตามแต่ละประเภทแล้ว ผู้ดูแลระบบยังสามารถกำหนดรูปแบบของ Regex เพื่อใช้ในการเปลี่ยนแปลงข้อมูล หรือปิดกั้นค่าบางอย่างในการส่งออกข้อมูล ผู้ใช้งานทั่วไปสามารถเข้ามาดูได้ว่าผู้ดูแลระบบ ได้กำหนดค่าเหล่านั้นไว้เช่นไร
 *   **Global Actions:** This menu gives you access to information about MISP and this instance. You can view and edit your own profile, view the manual, read the news or the terms of use again, see a list of the active organizations on this instance and a histogram of their contributions by attribute type.
 *   **Discussions:** Link to the discussion threads.
 
