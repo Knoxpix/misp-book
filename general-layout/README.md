@@ -48,11 +48,11 @@
 
 *   **List Attributes:** แสดงรายการแอตทริบิวต์ทั้งหมดโดยไม่มีการกรองความเป็นส่วนตัวหรือหน่วยงานใด สามารถเพิ่ม แก้ไข ลบ เผยแพร่ หรือดูรายละเอียดของแต่ละแอตทริบิวต์ได้ที่ส่วนนี้
 
-*   **Search Attributes:** You can set search terms for a filtered attribute index view here.
+*   **Search Attributes:** ส่วนค้นหาแอตทริบิวต์ตามเงื่อนไขที่ต้องการ
 
-*   **View Proposals:** Shows a list of all proposals that you are eligible to see.
+*   **View Proposals:** แสดงคำขอที่มีสิทธิในการเข้าถึง.
 
-*   **Events with proposals:** Shows all of the events created by your organisation that has pending proposals.
+*   **Events with proposals:** แสดงเหตุการณ์ทั้งหมดที่ถูกสร้างโดยหน่วยงานที่สังกัดที่คำขอยังไม่ถูกพิจารณา
 
 *   **List Tags:** List all the tags that have been created by users with tag creation rights on this instance.
 
