@@ -12,28 +12,29 @@
 *   **Event Actions:** เมนูของเหตุการณ์ ช่วยให้สามารถเข้าถึงฟังก์ชันทั้งหมดที่เกี่ยวข้องกับการสร้าง แก้ไข ลบ แผยแพร่ ค้นหา และแสดงเหตุการณ์และแอ็ตทริบิวต์.
 *   **Input Filters:** ตัวกรองการนำเข้าข้อมูล เป็นส่วนที่จะบอกว่าข้อมูลอะไรจะนำเข้าได้ หรือจะนำเข้าข้อมูลได้อย่างไร<br>
 นอกเหนือจากการตรวจสอบความถูกต้องเบื้องต้นของการระบุแอตทริบิวต์ตามแต่ละประเภทแล้ว ผู้ดูแลระบบยังสามารถกำหนดรูปแบบของ Regex เพื่อใช้ในการเปลี่ยนแปลงข้อมูล หรือปิดกั้นค่าบางอย่างในการส่งออกข้อมูล ผู้ใช้งานทั่วไปสามารถเข้ามาดูได้ว่าผู้ดูแลระบบ ได้กำหนดค่าเหล่านั้นไว้เช่นไร
-*   **Global Actions:** This menu gives you access to information about MISP and this instance. You can view and edit your own profile, view the manual, read the news or the terms of use again, see a list of the active organizations on this instance and a histogram of their contributions by attribute type.
-*   **Discussions:** Link to the discussion threads.
+*   **Global Actions:** เมนูนี้ช่วยให้คุณเข้าถึงข้อมูลเกี่ยวกับ MISP และอินสแตนซ์นี้ คุณสามารถดูและแก้ไขโปรไฟล์ของคุณเองดูคู่มืออ่านข่าวหรือข้อกำหนดในการให้บริการอีกครั้งดูรายชื่อองค์กรที่ใช้งานได้ในกรณีนี้และสร้างฮิสโตแกรมของการมีส่วนร่วมตามประเภทแอตทริบิวต์
+เมนูนี้จะให้ข้อมูลเกี่ยวกับข้อมูลที่เกี่ยวกับแอปพลิเคชัน โดยผู้ใช้งานสามารถดู แก้ไขข้อมูลของผู้ใช้เอง ดูคู่มือ อ่านข่าว หรือข้อกำหนดการใช้งาน ข้อมูลหน่วยงานที่เกี่ยวข้อง และรูปแบบแอ็ตทริบิวต์
+*   **Discussions:** ไปยังหัวข้อการสนทนา.
 
-#### Admin Menu Bar
+#### มุมมองผู้ดูแล
 ![Some additional buttons that will appear on top of these when a view provides it.](figures/MenuBarAdmin.jpg)
-*   **Home button:** idem as user.
+*   **Home button:** ปุ่มนี้จะกลับไปยังหน้าจอเริ่มต้นของแอ็พพลิเคชัน
 
-*   **Event Actions:** ibidem
+*   **Event Actions:** เมนูของเหตุการณ์ ช่วยให้สามารถเข้าถึงฟังก์ชันทั้งหมดที่เกี่ยวข้องกับการสร้าง แก้ไข ลบ แผยแพร่ ค้นหา และแสดงเหตุการณ์และแอ็ตทริบิวต์
 
-*   **Input Filters:** Ibidem
+*   **Input Filters:** ตัวกรองการนำเข้าข้อมูล เป็นส่วนที่จะบอกว่าข้อมูลอะไรจะนำเข้าได้ หรือจะนำเข้าข้อมูลได้อย่างไร<br>
+นอกเหนือจากการตรวจสอบความถูกต้องเบื้องต้นของการระบุแอตทริบิวต์ตามแต่ละประเภทแล้ว ผู้ดูแลระบบยังสามารถกำหนดรูปแบบของ Regex เพื่อใช้ในการเปลี่ยนแปลงข้อมูล หรือปิดกั้นค่าบางอย่างในการส่งออกข้อมูล ผู้ใช้งานทั่วไปสามารถเข้ามาดูได้ว่าผู้ดูแลระบบ ได้กำหนดค่าเหล่านั้นไว้เช่นไร
 
-*   **Global Actions:** Ibidem
+*   **Global Actions:** เมนูนี้ช่วยให้คุณเข้าถึงข้อมูลเกี่ยวกับ MISP และอินสแตนซ์นี้ คุณสามารถดูและแก้ไขโปรไฟล์ของคุณเองดูคู่มืออ่านข่าวหรือข้อกำหนดในการให้บริการอีกครั้งดูรายชื่อองค์กรที่ใช้งานได้ในกรณีนี้และสร้างฮิสโตแกรมของการมีส่วนร่วมตามประเภทแอตทริบิวต์
 
-*   **Sync Actions:** With administrator access rights, shows a list of the connected instances and allows the initiation of a push and a pull (more about the synchronization mechanisms later).
+*   **Sync Actions:** ด้วยสิทธิของผู้ดูแล จะแสดงรายการระบบที่ได้ทำการเชื่อมโยงไว้กับเครือข่ายที่อนุญาตให้ส่งหรือรับข้อมูลแลกเปลี่ยนซึ่งกันและกัน
 
-*   **Administration:** Administrators can add, edit or remove user accounts and user roles. Roles define the access rights to certain features such as publishing of events, usage of the REST interface or synchronization of any user belonging to the given role. Site administrators can also access a contact form, through which it is possible to reset the passwords of users, or to just get in touch with them via encrypted e-mails.
+*   **Administration:** ผู้ดูแลสามารถเพิ่ม แก้ไข ลบบัญชีผู้ใช้ หรือบทบาทหน้าที่ บทบาทหน้าที่เป็นตัวกำหนดให้ว่าผู้ใช้งาน สามารถเข้าถึงการทำงานใดได้บ้าง 
+ผู้ดูแลระบบยังสามารถเข้าถึงข้อมูลการติดต่อ ตั้งรหัสผ่านผู้ใช้งานใหม่ หรือสร้างช่องทางการติดต่อปลอดภัยผ่านอีเมล์ที่เข้ารหัส
 
-*   **Audit:** If you have audit permissions, you can view the logs for your organization (or for site admins for the entire system) here or even search the logs if you are interested in something specific.
+*   **Audit:** ในกรณีที่มีสิทธิตรวจสอบ จะสามารถดูบันทึึกเหตุการณ์ในองค์กรนั้น ๆ หรือถ้าเป็นผู้ดูแลระบบ จะสามารถดูบันทึกเหตุการณ์ทั้งหมดได้ หรือค้นหาเหตุการณ์เพื่อเจาะจงสิ่งที่ต้องการค้นหา
 
-*   **Proposal Notifications:** This shows how many proposals your organization has received and across how many events they are spread out. Clicking this will take you to the list of proposals.
-
-*   **Log out:** Logs you out of the system.
+*   **Log out:** ออกจากระบบ.
 
 ### A list of the contents of each of the above drop-down menus
 
