@@ -54,17 +54,17 @@
 
 *   **Events with proposals:** แสดงเหตุการณ์ทั้งหมดที่ถูกสร้างโดยหน่วยงานที่สังกัดที่คำขอยังไม่ถูกพิจารณา
 
-*   **List Tags:** List all the tags that have been created by users with tag creation rights on this instance.
+*   **List Tags:** แสดงรายการแท็กทั้งหมดที่สร้างขึ้นโดยผู้ใช้ที่มีสิทธิ์ในการสร้างแท็ก
 
-*   **Add Tag:** Create a new tag.
+*   **Add Tag:** สร้างแท็กใหม่
 
-*   **List Templates:** List all of the templates created by users with template creation rights on this instance.
+*   **List Templates:** แสดงรายการต้นแบบที่สร้างขึ้นโดยผู้ใช้ที่มีสิทธิ์ในการสร้าง
 
-*   **Add Template:** Create a new template.
+*   **Add Template:** สร้างต้นแบบ
 
-*   **Export:** Export the data accessible to you in various formats.
+*   **Export:** ส่งออกข้อมูลที่สามารถเข้าถึงได้ในรูปแบบต่างๆ
 
-*   **Automation:** If you have authentication key access, you can view how to use your key to use the REST interface for automation here.
+*   **Automation:** ถ้ามี authentication key access, you สามารถดูวิธีใช้คีย์เพื่อใช้อินเทอร์เฟซ REST สำหรับระบบอัตโนมัติได้
 
 ##### Input filters
 
