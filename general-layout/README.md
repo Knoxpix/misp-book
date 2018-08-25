@@ -10,7 +10,7 @@
 เมนูนี้มีฟังก์ชันหลักทั้งหมดของแอปพลิเคชันเป็นชุดเมนูแบบเลื่อนลง ซึ่งประกอบไปด้วยฟังก์ชันย่อยๆ ที่ถูกจัดเป็นหมวดหมู่ดังต่อไปนี้
 
 *   **Home button:** ปุ่มนี้จะกลับไปยังหน้าจอเริ่มต้นของแอ็พพลิเคชัน
-*   **Event Actions:** เมนูของเหตุการณ์ ช่วยให้สามารถเข้าถึงฟังก์ชันทั้งหมดที่เกี่ยวข้องกับการสร้าง แก้ไข ลบแผยแพร่ ค้นหา และแสดงเหตุการณ์และแอ็ตทริบิวต์.
+*   **Event Actions:** เมนูของเหตุการณ์ ช่วยให้สามารถเข้าถึงฟังก์ชันทั้งหมดที่เกี่ยวข้องกับการสร้าง แก้ไข ลบ แผยแพร่ ค้นหา และแสดงเหตุการณ์และแอ็ตทริบิวต์.
 *   **Input Filters:** Input filters alter what and how data can be entered into this instance. Apart from the basic validation of attribute entry by type, it is possible for the site administrators to define regular expression replacements and blacklists for certain values in addition to blocking certain values from being exportable. Users can view these replacement and blacklist rules here whilst administrator can alter them.
 *   **Global Actions:** This menu gives you access to information about MISP and this instance. You can view and edit your own profile, view the manual, read the news or the terms of use again, see a list of the active organizations on this instance and a histogram of their contributions by attribute type.
 *   **Discussions:** Link to the discussion threads.
