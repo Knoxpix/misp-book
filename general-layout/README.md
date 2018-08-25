@@ -7,7 +7,7 @@
 #### Simple User
 ![This is the main menu that will be accessible from all of the views. In some instances, some additional buttons that will appear on top of these when a view provides it.](figures/MenuBarUser.jpg)
 
-This menu contains all of the main functions of the site as a series of dropdown menus. These contains all (from the current simple user's perspective) accessible functions sorted into several groups.
+เมนูนี้มีฟังก์ชันหลักทั้งหมดของเว็บไซต์เป็นชุดเมนูแบบเลื่อนลง ซึ่งประกอบด้วยฟังก์ชันย่อยที่จัดอยู่ในกลุ่มต่าง ๆ
 
 *   **Home button:** This button will return you to the start screen of the application, which is the event index page (more about this later).
 *   **Event Actions:** All the malware data entered into MISP is made up of an event object that is described by its connected attributes. The Event actions menu gives access to all the functionality that has to do with the creation, modification, deletion, publishing, searching and listing of events and attributes.
