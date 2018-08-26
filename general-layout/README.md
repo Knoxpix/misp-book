@@ -81,25 +81,25 @@
 
 ![Global Actions](figures/GlobalActions.png)
 
-*   **News:** Read about the latest news regarding the MISP system
+*   **News:** อ่านข่าวล่าสุดเกี่ยวกับระบบ
 
-*   **My Profile:** Manage your user account.
+*   **My Profile:** จัดการบัญชีผู้ใช้
 
-*   **Dashboard:** allow you to see your Notifications of Proposals, Events with proposals and Delegation request. Your can see the last changes since your last visit, as Events updates and Events publications.
+*   **Dashboard:** แสดงข้อความแจ้งเตือนของคำร้องขอ เหตุการณ์ของคำร้องขอ แสดงถึงการเปลี่ยนแปลงล่าสุดของเหตุการณ์ และสิ่งที่เผยแพร่
 
-*   **Members List:** View the number of users per organization and get some statistics about the currently stored attributes.
+*   **Members List:** ดูจำนวนผู้ใช้ต่อองค์กรและดูสถิติเกี่ยวกับแอตทริบิวต์ที่เก็บไว้ในปัจจุบัน
 
-*   **Organizations:** View the organizations having a presence on this instance, with some useful informations as contact's name.
+*   **Organizations:** ดูองค์กรที่มีส่วนร่วมในระบบนี้พร้อมข้อมูลที่เป็นประโยชน์เช่นชื่อของผู้ติดต่อ
 
-*   **Role Permissions:** You can view the role permissions here.
+*   **Role Permissions:** ดูสิทธิ์การใช้งาน
 
-*  **List Sharing Groups:** You can view the list of existing Sharing Groups who you or your organization have access.
+*  **List Sharing Groups:** ดูรายชื่อกลุ่มการแชร์ที่มีอยู่ซึ่งคุณหรือองค์กรของคุณสามารถเข้าถึงได้
 
-*  **Add Sharing Group:** You can create a sharing group.
+*  **Add Sharing Group:** สร้างกลุ่มการแชร์
 
-*   **User Guide:** A link to this user guide.
+*   **User Guide:** ลิงก์ไปยังคู่มือผู้ใช้
 
-*   **Statistics:** View a series of statistics about the users and the data on this instance.
+*   **Statistics:** ดูชุดของสถิติเกี่ยวกับผู้ใช้และข้อมูลในระบบนี้
 
 
 ##### Sync Actions
@@ -107,22 +107,22 @@
 
 ![Sync Actions](figures/SyncActions.png)
 
-*   **List Servers:** Connect your MISP instance to other instances, or view and modify the currently established connections.
+*   **List Servers:** เชื่อมต่อระบบ MISP ของคุณเข้ากับระบบอื่นหรือดูและแก้ไขการเชื่อมต่อปัจจุบัน 
 <!-- Fix provided by elhoim -->
-It may be that you have an Error Message in the page (if you enabled debug or site_admin_debug settings). An example of error message:
+อาจพบข้อความแสดงข้อผิดพลาดในหน้าเว็บ (ถ้าคุณเปิดใช้งาน debug หรือการตั้งค่า site_admin_debug) ตัวอย่างข้อความแสดงข้อผิดพลาด:
 
 ![Error message](figures/pb-list-server.png)
 
-An easy first step to make most of them go away is to use the clean cache feature on the server settings menu, diagnostics tab.
+ขั้นตอนแรกเพื่อให้ระบบพร้อมใช้คือการล้างแคชในส่วนของการตั้งค่าเซิร์ฟเวอร์ และไปที่แท็บการวินิจฉัย
 
 ![cleanscript](figures/cleanscript1.png)
 
-You must then scroll down the page.
+จากนั้นคุณต้องเลื่อนหน้าจอลงมา
 
 ![cleanscript](figures/cleanscript2.png)
 
 
-*  **List Feeds:** Follow the RSS feeds of other organization or CERTs worldwide.  
+*  **List Feeds:** ติดตามฟีด RSS ขององค์กรอื่นหรือ CERT ทั่วโลก  
 
 ##### Administration
 
