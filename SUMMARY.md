@@ -6,7 +6,7 @@
 * [Get Your Instance](get-your-instance/README.md)
 * [มุมมองทั่วไป](general-layout/README.md)
 * [แนวคิด](general-concepts/README.md)
-* [User Management and Global Actions](user-management/README.md)
+* [การจัดการผู้ใช้และการดำเนินการ](user-management/README.md)
 * [Using the System](using-the-system/README.md)
 * [Delegation of Event](delegation/README.md)
 * [Extending Events](extended-events/README.md)

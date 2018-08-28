@@ -128,49 +128,49 @@
 
 ![Administration](figures/Administration.png)
 
-*   **List Users:** View, modify or delete the currently registered users.
+*   **List Users:** ดู แก้ไข หรือลบผู้ใช้ที่ลงทะเบียนไว้ในปัจจุบัน
 
-*   **New User:** Create an account for a new user for your organisation. Site administrators can create users for any organisation.
+*   **New User:** สร้างบัญชีผู้ใช้ใหม่สำหรับองค์กร ผู้ดูแลไซต์สามารถสร้างผู้ใช้สำหรับองค์กรใดๆได้
 
-*  **Contact Users:** You can use this view to send messages to your current or future users or send them a temporary password.
+*  **Contact Users:** คุณสามารถใช้เพื่อส่งข้อความถึงผู้ใช้ปัจจุบันหรือส่งรหัสผ่านชั่วคราว
 
-When adding a new user to the system, or when you want to manually reset the password for a user, just use the "Send temporary password" setting.
+เมื่อเพิ่มผู้ใช้ใหม่ลงในระบบหรือเมื่อคุณต้องการตั้งรหัสผ่านใหม่โดยการ "ส่งรหัสผ่านชั่วคราว"
 
-After selecting the action, choose who the target of the e-mails should be (all users, a single user or a user not yet in the system).
+หลังจากเลือก action ให้เลือกผู้ใช้ปลายทางที่จะส่งอีเมล์
 
-You can then specify (if eligible) what the e-mail address of the target is (for existing users you can choose from a dropdown menu).
+คุณสามารถระบุที่อยู่อีเมลของเป้าหมายได้ (สำหรับผู้ใช้ปัจจุบันที่คุณสามารถเลือกได้จากเมนูแบบเลื่อนลง)
 
-In the case of a new user, you can specify the future user's GnuPG key, to send his/her new key in an encrypted e-mail.
+ในกรณีของผู้ใช้รายใหม่คุณสามารถระบุคีย์ GnuPG ของผู้ใช้ในอนาคตเพื่อส่งคีย์ใหม่ในอีเมลที่เข้ารหัสได้
 
-The system will automatically generate a message for you, but it is also possible to write a custom message if you tick the check-box, but don't worry about assigning a temporary password manually, the system will do that for you, right after your custom message.
+ระบบจะสร้างข้อความให้คโดยอัตโนมัติ แต่คุณยังสามารถเขียนข้อความที่กำหนดเองได้หากคุณทำเครื่องหมายที่ช่องทำเครื่องหมาย แต่ไม่ต้องกังวลกับการกำหนดรหัสผ่านชั่วคราวด้วยตนเองระบบจะดำเนินการให้คุณทันที ข้อความที่กำหนดเองของคุณ
 
-*  **List Organizations:** View the organizations having a presence on this instance, with some useful informations.
+*  **List Organizations:** ดูองค์กรที่มีส่วนร่วมในระบบนี้
 
-*  **Add Organization:**
+*  **Add Organization:** เพิ่มองค์กร
 
-*   **List Roles:** List, modify or delete currently existing roles.
+*   **List Roles:** แก้ไข เปลี่ยนแปลง หรือลบบทบาทที่มีอยู่ในปัจจุบัน
 
-*   **Add Role:** Create a new role group for the users of this instance, controlling their privileges to create, modify, delete and to publish events and to access certain features such as the logs or automation.
+*   **Add Role:** สร้างกลุ่มบทบาทใหม่สำหรับผู้ใช้ระบบนี้ เพื่อควบคุมสิทธิ์ในการสร้างแก้ไขลบและเผยแพร่เหตุการณ์และเข้าถึงคุณลักษณะบางอย่างเช่นบันทึกหรือระบบอัตโนมัติ
 
-*   **Administrative Tools:** Various tools, upgrade scripts that can help a site-admin run the instance.
+*   **Administrative Tools:** เครื่องมือต่างๆสคริปต์การอัปเกรดที่สามารถช่วยให้ผู้ดูแลระบบไซต์ใช้งานระบบได้
 
-*   **Server Settings:** Set up and diagnose your MISP installation.
+*   **Server Settings:** ตั้งค่าและวิเคราะห์การติดตั้งระบบ
 
-*   **Jobs:** View the background jobs and their progress
+*   **Jobs:** ดูงานเบื้องหลังและความคืบหน้าของงาน
 
-*   **Scheduled Tasks:** Schedule the pre-defined tasks for your instance (this currently includes export caching, server pull and server push).
+*   **Scheduled Tasks:** กำหนดการงานที่กำหนดไว้ล่วงหน้าสำหรับระบบของคุณ (ปัจจุบันมีการส่งออกแคชการดึงเซิร์ฟเวอร์และการรับ-ดึงข้อมูลของเซิร์ฟเวอร์)
 
 ##### Audit
 
 ![Audit](figures/Audit.png)
-*   **List Logs:** View the logs of the instance.
-*   **Search Logs:** Search the logs by various attributes.
+*   **List Logs:** ดู log
+*   **Search Logs:** ค้นหา log
 
 ##### Discussions
 
-*   **List Discussions:** List all of the discussion threads.
-*   **Start Discussion:** Create a new discussion thread.
+*   **List Discussions:** แสดงหัวข้อการสนทนาทั้งหมด
+*   **Start Discussion:** สร้างหัวข้อการสนทนาใหม่
 
 ### The left bar
 
-This bar changes based on each page-group. The blue selection shows you what page you are on.
+แถบนี้มีการเปลี่ยนแปลงตามแต่ละกลุ่มและหน้า
