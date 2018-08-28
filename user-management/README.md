@@ -7,7 +7,7 @@
 
 *   **Accepting the Terms of use:** ข้อกำหนดในการให้บริการจะปรากฏขึ้นทันทีหลังจากเข้าสู่ระบบเป็นครั้งแรกโปรดอ่านหน้านี้ก่อนคลิก "ยอมรับข้อกำหนด" ที่ด้านล่างของหน้า
 *   **Changing the password:** หลังจากยอมรับข้อกำหนดในการให้บริการ คุณจะได้รับแจ้งให้เปลี่ยนรหัสผ่านของคุณ แต่โปรดจำไว้ว่าต้องผ่าน [นโยบายรหัสผ่าน](https://misp.gitbooks.io/misp-book/content/quick-Start/#password-policy) และป้อนรหัสผ่านเดียวกันลงในฟิลด์ยืนยันรหัสผ่านก่อนคลิกส่งเพื่อสิ้นสุดการเปลี่ยนแปลง
-<br>![Changing the password](figures/password.png)<script>alert('xss');</script>
+<br>![Changing the password](figures/password.png)
 *   **Setting up the GnuPG Key:** In order for the system to be able to encrypt the messages that you send through it, it needs to know your GnuPG key. Navigate to the Edit profile view (My Profile on the left -> Edit profile in the top right corner). Paste the key into the GnuPG Key field and click submit.
 *   **Subscribing to Auto-alerts:** Turning auto-alerts on will allow the system to send you e-mail notifications about any new public events entered into the system by other users and private events added by members of your organisation. To turn this on, navigate to the Edit profile view (My profile on the left navigation menu -> Edit profile in the top right corner). Tick the auto-alert checkbox and click submit to enable this feature.
 ![Use these checkboxes to subscribe to auto-alerts and contact reporter e-mails.](figures/alerts.png)
