@@ -2,15 +2,15 @@
 
 ## การจัดการผู้ใช้และการดำเนินการ
 
-### First run of the system
+### การทำงานครั้งแรกของระบบ
 เมื่อแรกเข้าสู่ระบบด้วยชื่อผู้ใช้และรหัสผ่านที่ผู้ดูแลระบบของคุณกำหนดให้ มีหลายสิ่งที่ต้องทำก่อนที่คุณจะสามารถเริ่มใช้ระบบได้
 
 *   **Accepting the Terms of use:** ข้อกำหนดในการให้บริการจะปรากฏขึ้นทันทีหลังจากเข้าสู่ระบบเป็นครั้งแรกโปรดอ่านหน้านี้ก่อนคลิก "ยอมรับข้อกำหนด" ที่ด้านล่างของหน้า
 *   **Changing the password:** หลังจากยอมรับข้อกำหนดในการให้บริการ คุณจะได้รับแจ้งให้เปลี่ยนรหัสผ่านของคุณ แต่โปรดจำไว้ว่าต้องผ่าน [นโยบายรหัสผ่าน](https://misp.gitbooks.io/misp-book/content/quick-Start/#password-policy) และป้อนรหัสผ่านเดียวกันลงในฟิลด์ยืนยันรหัสผ่านก่อนคลิกส่งเพื่อสิ้นสุดการเปลี่ยนแปลง
 <br>![Changing the password](figures/password.png)
-*   **Setting up the GnuPG Key:** In order for the system to be able to encrypt the messages that you send through it, it needs to know your GnuPG key. Navigate to the Edit profile view (My Profile on the left -> Edit profile in the top right corner). Paste the key into the GnuPG Key field and click submit.
-*   **Subscribing to Auto-alerts:** Turning auto-alerts on will allow the system to send you e-mail notifications about any new public events entered into the system by other users and private events added by members of your organisation. To turn this on, navigate to the Edit profile view (My profile on the left navigation menu -> Edit profile in the top right corner). Tick the auto-alert checkbox and click submit to enable this feature.
+*   **Setting up the GnuPG Key:** เพื่อให้ระบบสามารถเข้ารหัสข้อความที่คุณส่งผ่านได้จำเป็นต้องทราบคีย์ GnuPG ของคุณ ไปที่มุมมองแก้ไขโปรไฟล์ (My Profile ด้านซ้าย -> Edit profile ที่มุมบนขวา). วางคีย์ลงในฟิลด์คีย์ GnuPG และคลิกส่ง.
+*   **Subscribing to Auto-alerts:** การเปิดการแจ้งเตือนอัตโนมัติจะช่วยให้ระบบสามารถส่งการแจ้งเตือนทางอีเมลเกี่ยวกับกิจกรรมสาธารณะใหม่ ๆ ที่ป้อนลงในระบบโดยผู้ใช้รายอื่น ๆ และกิจกรรมส่วนตัวที่สมาชิกในองค์กรของคุณเพิ่ม หากต้องการเปิดใช้งานไปที่มุมมองแก้ไขโปรไฟล์ (My profile ในเมนูนำทางด้านซ้าย -> Edit profile ที่มุมบนขวา). ทำเครื่องหมายที่ช่องทำเครื่องหมายอัตโนมัติและคลิกส่งเพื่อเปิดใช้คุณลักษณะนี้.
 ![Use these checkboxes to subscribe to auto-alerts and contact reporter e-mails.](figures/alerts.png)
-*   **Subscribing to e-mails sent via the "Contact Reporter" functionality:** This feature is turned on right below the autoalerts and will allow you to receive e-mails addressed to your organisation whenever a user tries to ask about an event that was posted by a user of your organisation. Keep in mind that you can still be addressed by such a request even when this setting is turned off, if someone tries to contact you as the event creator directly or your organisation for an event that you personally have created then you will be notified.
-*   **Reviewing the Terms & Conditions:** To review the Terms & Conditions or to read the User Guide, use the appropriate button on the left navigation menu.
-*   **Making sure that compatibility mode is turned off (IE9&IE10):** Compatibility mode can cause some elements to appear differently than intended or not appear at all. Make sure you have this option turned off.
+*   **Subscribing to e-mails sent via the "Contact Reporter" functionality:** คุณลักษณะนี้เปิดอยู่ด้านล่าง autoalerts และจะช่วยให้คุณได้รับอีเมลที่ส่งถึงองค์กรของคุณเมื่อใดก็ตามที่ผู้ใช้พยายามถามเกี่ยวกับกิจกรรมที่โพสต์โดยผู้ใช้ขององค์กรของคุณ โปรดจำไว้ว่าคุณสามารถดำเนินการตามคำร้องขอดังกล่าวได้แม้ว่าจะปิดใช้งานการตั้งค่านี้หากมีผู้พยายามติดต่อคุณในฐานะผู้สร้างเหตุการณ์โดยตรงหรือองค์กรของคุณสำหรับกิจกรรมที่คุณสร้างขึ้นเองคุณจะได้รับการแจ้งเตือน
+*   **Reviewing the Terms & Conditions:** หากต้องการอ่านข้อกำหนดในการให้บริการหรืออ่านคู่มือผู้ใช้ให้ใช้ปุ่มที่เหมาะสมในเมนูนำทางด้านซ้าย
+*   **Making sure that compatibility mode is turned off (IE9&IE10):** โหมดความเข้ากันได้อาจทำให้บางองค์ประกอบปรากฏแตกต่างจากที่ตั้งใจหรือไม่ปรากฏเลย ตรวจสอบว่าคุณได้ปิดตัวเลือกนี้แล้ว.
