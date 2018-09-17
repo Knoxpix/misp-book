@@ -3,7 +3,7 @@
 * [Introduction](README.md)
 * [Book Convention](book-convention/README.md)
 * [Quick Start](quick-start/README.md)
-* [Get Your Instance](get-your-instance/README.md)
+* [รับอินสแตนซ์](get-your-instance/README.md)
 * [มุมมองทั่วไป](general-layout/README.md)
 * [แนวคิด](general-concepts/README.md)
 * [การจัดการผู้ใช้และการดำเนินการ](user-management/README.md)
