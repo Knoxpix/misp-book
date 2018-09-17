@@ -21,36 +21,36 @@ The images is updated on a regular base. You should frequently re-visit the onli
 
 ดาวน์โหลด VM และตรวจสอบ SHA512 fingerprint.
 
-#### Import Appliance
+#### การนำเข้า
 
-In VirtualBox use the "Import Appliance..." functionality to import the virtual machine.
+ใน VirtualBox ไปที่ "Import Appliance..." เพื่อที่จะนำเข้า VM.
 
 ![Import Appliance...](figures/importApp.png)
 
-The instructions in this manual covers VirtualBox only. If you prefer another virtualization solution like VMWare you can find some quick instruction on the [MISP training materials page](https://www.circl.lu/services/misp-training-materials/ "MISP training materials page").
+คำแนะนำในคู่มือฉบับนี้ครอบคลุม VirtualBox เท่านั้น ถ้าคุณต้องการโซลูชันเสมือนอื่นเช่น VMWare คุณสามารถหาคำแนะนำอย่างรวดเร็วใน [MISP training materials page](https://www.circl.lu/services/misp-training-materials/ "MISP training materials page").
 
 #### MISP VM Credentials
 
-The MISP image is pre-configured to be reachable on the private IP address **192.168.56.50** by SSH. The GUI is reachable by [http://192.168.56.50/](http://192.168.56.50/).
+MISP ได้รับการกำหนดค่าล่วงหน้าเพื่อให้สามารถเข้าถึงได้บนที่อยู่ IP ส่วนตัว **192.168.56.50** ทาง SSH. GUI สามารถเข้าถึงได้โดย [http://192.168.56.50/](http://192.168.56.50/).
 
-You should have two interfaces on your VirtualBox configuration \(NAT and host-only\). You can also configure access to the MISP instance by doing port forwarding on the NAT interface.
+คุณควรมีอินเทอร์เฟซสองตัวในคอนฟิกูเรชัน VirtualBox \(NAT และโฮสต์เท่านั้น\) นอกจากนี้คุณยังสามารถกำหนดค่าการเข้าถึงอินสแตนซ์ของ MISP ได้ด้วยการทำ port forward บนอินเทอร์เฟซ NAT
 
 MISP credentials:
 
-* **GUI Admin:** admin@admin.test:admin  \(it's the site admin account with full rights, feel free to create other users\)
+* **GUI Admin:** admin@admin.test:admin  \(เป็นบัญชีผู้ดูแลไซต์ที่มีสิทธิ์เต็มรูปแบบคุณสามารถสร้างผู้ใช้รายอื่นได้\)
 * **Shell/SSH:** misp : Password1234
 
 #### Potential issues
 
-During life trainings we see in rare cases that some users could not reach the virtual machine over the virtual network.
+ในระหว่างการฝึกอบรมสดเราพบว่าในบางกรณีผู้ใช้บางรายไม่สามารถเข้าถึงเครื่องเสมือนผ่านเครือข่ายเสมือนได้
 
-Some investigations discover that this always happens with user whom already had VirtualBox in use before and had already one or more **Host-only Adapter** configured in advance.
+การตรวจสอบบางอย่างพบว่าเหตุการณ์นี้เกิดขึ้นกับผู้ใช้ที่มี VirtualBox อยู่แล้วและมีอะแดปเตอร์ **Host-only** ที่กำหนดไว้ล่วงหน้าอย่างน้อยหนึ่งตัว
 
-The MISP image is pre-configured to use **Host-only Adapter** with the Name **vboxnet0**.
+MISP ได้รับการกำหนดค่าไว้ล่วงหน้าเพื่อใช้ตัวแปลงเฉพาะโฮสต์กับอะแดปเตอร์ชื่อ vboxnet0
 
 ![Host-only Adapter vboxnet0](figures/host-only-1.png)
 
-If this is already occupied by previous VirtualBox projects, try to attach the network adapter to the next available **Host-only** network.
+ถ้า VirtualBox นี้ถูกครอบครองอยู่แล้วให้ลองต่ออะแดปเตอร์เครือข่ายกับเครือข่าย Host-only ที่มีอยู่ถัดไป
 
 ![Host-only Adapter vboxnet0](figures/host-only-2.png)
 
