@@ -230,161 +230,162 @@ Sharing groups consist of the following elements, each of which has its own page
 
 ![This view includes the basic information about an event, a link to related events, all attributes and attachments with tools to modify or delete them and extra functions for publishing the event or getting in touch with the event's reporter.](figures/event_detail.png)
 
-##General Event Information##
+##ข้อมูลทั่วไปเกี่ยวกับเหตุการณ์##
 
-*   **ID:** The ID of the event.
-*   **Uuid:** In order to avoid collisions between events and attributes (during for example a sync) a Uuid is assigned that uniquely identifies each of them.
-*   **Org** The organisation that has originally created the event. The logo (if it exists on the server, alternatively a string) representing the organisation is also shown int he right upper corner.
-*   **Contributors:** Shows a list of the organisations that have contributed to the event via proposals. If you click any of the logos listed here, you'll get redirected to a filtered event history view, including only the changes made by the organisation.
-*   **Tags:** A list of tags associated with the event. Clicking a tag will show a list of events with the same tag attached. The little cross next to each tag allows you to remove the tag from the event, whilst the '+' button allows you to assign a tag. For the latter two options to be visible, you have to have tagging permission.
-*   **Date:** The date of detection, set by the user that creates the event, not to be confused with the creation date of the event.
-*   **Threat Level:** The assigned threat level of the event.
-*   **Analysis:** The status of the analysis.
-*   **Distribution:** This shows the distribution rules applied to this event, controlling whether only the creating organisation can see (Your organisation only) it or everyone on the instance (This community only). The two remaining settings allow the event to be propagated to organisations on remote connected instances.
-*   **Info:** A short description of the event itself. Make sure not to put information in here that could be used for correlation purposes and be better suited as an Attribute.
-*   **Published:** Whether the event has been published or not. Publishing allows the attributes of the event to be used for all eligible exports and it notifies users that have subscribed to the event alerts. Also, a publish initiates a push to all eligible instances.
+*   **ID:** รหัสของเหตุการณ์
+*   **Uuid:** เพื่อหลีกเลี่ยงการชนกันระหว่างเหตุการณ์และแอตทริบิวต์ (ในระหว่างการซิงค์) Uuid จะกำหนดเอกลักษณ์ของแต่ละคน
+*   **Org** องค์กรที่สร้างเหตุการณ์นี้ขึ้นมา โลโก้ (ถ้ามีอยู่ในเซิร์ฟเวอร์หรือสตริง) แทนองค์กรจะปรากฏขึ้น int เขามุมบนขวา
+*   **Contributors:** แสดงรายการขององค์กรที่มีส่วนร่วมในกิจกรรมผ่านข้อเสนอ หากคุณคลิกที่โลโก้ใด ๆ ที่แสดงไว้ที่นี่คุณจะได้รับการเปลี่ยนเส้นทางไปยังมุมมองประวัติเหตุการณ์ที่ถูกกรองซึ่งรวมถึงเฉพาะการเปลี่ยนแปลงที่ทำโดยองค์กร
+*   **Tags:** รายการแท็กที่เกี่ยวข้องกับกิจกรรม การคลิกแท็กจะแสดงรายการกิจกรรมที่มีแท็กเดียวกันอยู่ เครื่องหมายกางเขนเล็ก ๆ ถัดจากแต่ละแท็กช่วยให้คุณลบแท็กออกจากกิจกรรมได้ขณะที่ปุ่ม '+' อนุญาตให้คุณกำหนดแท็ก สำหรับสองตัวเลือกสุดท้ายที่สามารถมองเห็นได้คุณต้องมีสิทธิ์ในการติดแท็ก
+*   **Date:** Tวันที่ของการตรวจสอบที่กำหนดโดยผู้ใช้ที่สร้างกิจกรรมเพื่อไม่ให้สับสนกับวันที่สร้างกิจกรรม
+*   **Threat Level:** ระดับภัยคุกคามที่กำหนดของเหตุการณ์
+*   **Analysis:** สถานะของการวิเคราะห์
+*   **Distribution:** แสดงกฎการแจกจ่ายที่ใช้กับกิจกรรมนี้และควบคุมว่าองค์กรที่สร้างสามารถดูได้หรือไม่ (องค์กรของคุณเท่านั้น) หรือทุกคนบนอินสแตนซ์ (เฉพาะชุมชนนี้เท่านั้น) การตั้งค่าที่เหลืออีกสองค่าอนุญาตให้มีการเผยแพร่กิจกรรมไปยังองค์กรในอินสแตนซ์ที่เชื่อมต่อระยะไกล
+*   **Info:** คำอธิบายสั้น ๆ เกี่ยวกับเหตุการณ์ ตรวจดูให้แน่ใจว่าไม่ได้ใส่ข้อมูลในที่นี้ซึ่งสามารถนำไปใช้เพื่อวัตถุประสงค์ในเชิงสัมพันธ์และเหมาะสมกับแอตทริบิวต์ได้ดียิ่งขึ้น
+*   **Published:** ไม่ว่าเหตุการณ์จะถูกเผยแพร่หรือไม่ก็ตาม การเผยแพร่ช่วยให้สามารถใช้แอตทริบิวต์ของกิจกรรมสำหรับการส่งออกที่มีสิทธิ์ทั้งหมดและแจ้งผู้ใช้ที่สมัครรับการแจ้งเตือนกิจกรรม นอกจากนี้การเผยแพร่ยังเป็นการผลักดันไปยังทุกกรณีที่มีสิทธิ์
 
-**List of Related Events**
-The list of relations is shown on the right hand side of the general event information. Events can be related by having one or more attributes that are exact matches. For example, if two events both contain a source IP attribute of 11.11.11.11 then they are related. The list of events that are related the currently shown one, are listed under "Related Events", as links (titled the related event's date and ID number) to the events themselves.
+**รายการกิจกรรมที่เกี่ยวข้อง**
+รายการความสัมพันธ์จะปรากฏที่ด้านขวามือของข้อมูลเหตุการณ์ทั่วไป เหตุการณ์สามารถเกี่ยวข้องได้โดยการระบุแอตทริบิวต์อย่างน้อยหนึ่งรายการที่ตรงกันทั้งหมด ตัวอย่างเช่นถ้าทั้งสองเหตุการณ์มีแอ็ตทริบิวต์ IP ต้นทาง 11.11.11.11 จะเกี่ยวข้องกัน รายการกิจกรรมที่เกี่ยวข้องกับรายการปัจจุบันที่แสดงอยู่ในรายการ "กิจกรรมที่เกี่ยวข้อง" เป็นลิงก์ (ระบุวันที่และหมายเลขรหัสของเหตุการณ์ที่เกี่ยวข้อง) กับกิจกรรมนั้น ๆ
 
 **Data Element Toggles**
-You can control some of the data that is shown on this page using three toggles. The elements that can be disabled are the pivot threads, the attributes (and proposals) and the Discussions. You can collapse these elements and then expand them again using the same button.
+คุณสามารถควบคุมข้อมูลบางส่วนที่แสดงในหน้านี้โดยใช้การสลับสามแบบ องค์ประกอบที่สามารถปิดใช้งานคือเธรดการหมุน, แอตทริบิวต์ (และข้อเสนอ) และการสนทนา คุณสามารถยุบองค์ประกอบเหล่านี้แล้วขยายอีกครั้งโดยใช้ปุ่มเดียวกัน
 
 **Pivot Threads**
-While moving from event to event through the relation links (a process that we refer to as pivoting), you create a path that shows which events you have traversed. This path is reset by leaving the event view and navigating elsewhere in the application or by deleting the root pivot element.
-Each event visited is represented by a bubble in the pivot thread graph, connected by lines that show how the user has arrived at the next connected event. It is possible to jump back to an earlier relation and pivot to another event through that, creating branches in the graph.
-The currently selected event is coloured blue in the graph. If you would like to delete an element from the graph (including all of elements that branch off of it) just click on the small x within a pivot bubble. For a deletion to be possible the following conditions have to be met:
-*   The pivot element to be deleted cannot be on the path that leads to the currently selected event
-*   The pivot element residing in the graph's root can always be deleted - this will simply reset the current pivot thread
+ในขณะที่ย้ายจากเหตุการณ์ไปยังเหตุการณ์ผ่านลิงก์ความสัมพันธ์ (กระบวนการที่เราเรียกว่าการหมุนเวียน) คุณจะสร้างเส้นทางที่จะแสดงว่าคุณทำกิจกรรมใด เส้นทางนี้ถูกรีเซ็ตโดยออกจากมุมมองกิจกรรมและนำทางไปยังที่อื่น ๆ ในแอปพลิเคชันหรือโดยการลบองค์ประกอบหลักของ Pivot
+แต่ละเหตุการณ์ที่เข้าชมจะแสดงด้วยฟองอากาศในกราฟด้ายหมุนซึ่งเชื่อมต่อด้วยเส้นที่แสดงให้เห็นว่าผู้ใช้เข้ามาถึงเหตุการณ์ที่เชื่อมต่อกันครั้งต่อไปอย่างไร เป็นไปได้ที่จะย้อนกลับไปสู่ความสัมพันธ์ก่อนหน้านี้และหมุนไปยังเหตุการณ์อื่นผ่านทางนั้นการสร้างกิ่งในกราฟ
+เหตุการณ์ที่เลือกในปัจจุบันมีสีฟ้าในกราฟ หากคุณต้องการลบองค์ประกอบออกจากกราฟ (รวมทั้งองค์ประกอบทั้งหมดที่ปิดสาขา) เพียงแค่คลิกที่ x เล็ก ๆ ภายในลูกโป่งหมุน สำหรับการลบที่เป็นไปได้ต้องปฏิบัติตามเงื่อนไขต่อไปนี้:
+* องค์ประกอบหลักที่จะลบต้องไม่อยู่ในพา ธ ที่นำไปสู่เหตุการณ์ที่เลือกในปัจจุบัน
+* องค์ประกอบเดือยที่อาศัยอยู่ในรากของกราฟสามารถลบได้เสมอ - นี่จะเป็นการรีเซ็ตเธรดหมุนปัจจุบัน
 
 **Attributes and Proposals**
-A list of all attributes and proposals attached to the event. The fields for each of them only differ in the available actions and the fact that for proposals to attributes all fields are blank that would stay unchanged if the proposal was accepted (for example, proposing a change to an attribute to turn the IDS flag on will have all fields apart from the IDS flag blank in the proposal. Here is a list of what each of the fields represents:
-*   **Date**: The date of the last modification to the attribute. Proposals don't have a date of last edit.
-*   **Category**: The category of the attribute or proposal. For a list of possible categories visit the section on [categories and types](categories-and-types).
-*   **Type**: The type of the attribute or proposal. For a list of possible categories visit the section on [categories and types](categories-and-types).
-*   **Value**: The value or value-pair of the attribute. This is the main payload of the attribute, which is described by the category and type columns. For certain types of attributes that are made up of value-pairs the two parts will be split by a pipe (|), such as for filename|md5. The value field(s) are used by the correlation engine to find relations between events. In value-pair attributes both values are correlated individually.
-*   **Comment**: Attributes can have a contextual comment to further describe the attribute. These comments are not used for correlation and are purely informative.
-*   **Related Events**: A list of the event IDs that also contain an attribute with the same value.
-*   **IDS**: Flags an attribute as an indicator of compromise, allowing it to be included in all of the eligible exports.
-*   **Distribution**: Defines the distribution of the attribute individually. An attribute can have a different distribution level than the event. In any case, the lowest distribution level of the two is used.
-*   **Actions**: The user can interact with the events through these buttons, which will be further described in the next portion of the guide as they differ for attributes and proposals.
+รายการแอตทริบิวต์และข้อเสนอทั้งหมดที่แนบมากับกิจกรรม เขตข้อมูลสำหรับแต่ละส่วนจะแตกต่างกันไปในการดำเนินการที่พร้อมใช้งานและความเป็นจริงว่าข้อเสนอเพื่อกำหนดแอตทริบิวต์ทั้งหมดเป็นฟิลด์ว่างเปล่าซึ่งจะคงที่หากข้อเสนอได้รับการยอมรับ (เช่นเสนอการเปลี่ยนแปลงแอตทริบิวต์เพื่อเปิดแฟล็ก IDS ในจะ มีฟิลด์ทั้งหมดนอกเหนือจากค่าสถานะ IDS ว่างเปล่าในข้อเสนอนี่คือรายการของฟิลด์แต่ละฟิลด์:
+*   **Date**: วันที่แก้ไขแอตทริบิวต์ครั้งล่าสุด ข้อเสนอแนะไม่มีวันที่แก้ไขล่าสุด
+*   **Category**: หมวดหมู่ของแอตทริบิวต์หรือข้อเสนอ สำหรับรายการหมวดหมู่ที่เป็นไปได้ให้ไปที่ส่วน[categories and types](categories-and-types).
+*   **Type**: ประเภทของแอ็ตทริบิวต์หรือข้อเสนอ สำหรับรายการหมวดหมู่ที่เป็นไปได้ให้ไปที่ส่วน [categories and types](categories-and-types).
+*   **Value**: ค่าหรือคู่ค่าของแอตทริบิวต์ นี่เป็นข้อมูลหลักของแอตทริบิวต์ซึ่งอธิบายโดยคอลัมน์ประเภทและประเภท สำหรับแอตทริบิวต์บางประเภทที่ประกอบด้วยคู่ - ค่าสองส่วนจะถูกแยกออกด้วยกันโดยใช้ท่อ (|) เช่นสำหรับชื่อไฟล์ | md5 เขตข้อมูลค่าถูกใช้โดยเครื่องมือความสัมพันธ์เพื่อหาความสัมพันธ์ระหว่างเหตุการณ์ ในแอตทริบิวต์มูลค่าคู่ค่าทั้งสองมีความสัมพันธ์กัน
+*   **Comment**: แอตทริบิวต์สามารถมีความคิดเห็นตามบริบทเพื่ออธิบายแอตทริบิวต์เพิ่มเติมได้ ความคิดเห็นเหล่านี้ไม่ได้ใช้สำหรับความสัมพันธ์และเป็นข้อมูลอย่างหมดจด
+*   **Related Events**: รายการรหัสเหตุการณ์ที่มีแอตทริบิวต์ที่มีค่าเหมือนกัน
+*   **IDS**: ตั้งค่าสถานะเป็นตัวบ่งชี้การประนีประนอมเพื่อให้สามารถรวมการส่งออกที่มีสิทธิ์ทั้งหมดได้.
+*   **Distribution**: กำหนดการแจกจ่ายแอตทริบิวต์แต่ละรายการ แอตทริบิวต์สามารถมีระดับการแจกจ่ายที่ต่างจากเหตุการณ์ได้ ไม่ว่าในกรณีใด ๆ จะใช้ระดับการกระจายต่ำสุดของทั้งสอง
+*   **Actions**: ผู้ใช้สามารถโต้ตอบกับเหตุการณ์ต่างๆผ่านทางปุ่มเหล่านี้ซึ่งจะอธิบายเพิ่มเติมในส่วนถัดไปของคู่มือเนื่องจากพวกเขาต่างกันสำหรับแอตทริบิวต์และข้อเสนอ
 
-Depending on the colour coding of the row, you can have an attribute, a proposal to the event or a proposal to an attribute:
-*   **Attributes**: Each uncoloured line represents an Attribute.
-*   **Proposals to an Event**: Each gray line at the end of the list represents a Proposal to an event. These are proposals for a new attribute, mostly unrelated to any of the currently existing attributes. If the creator of the event accepts one of these a new attribute will be created.
-*   **Proposals to an Attribute**: Each attribute can have several edit proposals. These will be placed right below the attribute that the proposal affects and - as with the event proposals - is coloured grey. The original attribute's row is coloured blue if a proposal exists for it.
+ขึ้นอยู่กับการเขียนโค้ดสีของแถวคุณสามารถมีแอตทริบิวต์ข้อเสนอไปยังกิจกรรมหรือข้อเสนอให้กับแอตทริบิวต์:
+*   **Attributes**: เส้นสีที่ไม่ได้เป็นสีแทนแอตทริบิวต์
+*   **Proposals to an Event**: แต่ละแถวสีเทาที่ท้ายสุดของรายการแสดงถึงข้อเสนอในการจัดงาน ข้อเสนอเหล่านี้เป็นข้อเสนอสำหรับแอตทริบิวต์ใหม่ซึ่งส่วนใหญ่ไม่เกี่ยวข้องกับแอตทริบิวต์ใด ๆ ที่มีอยู่ในปัจจุบัน หากผู้สร้างเหตุการณ์ยอมรับหนึ่งในแอตทริบิวต์ใหม่เหล่านี้จะถูกสร้างขึ้น
+*   **Proposals to an Attribute**: แต่ละแอตทริบิวต์สามารถมีข้อเสนอในการแก้ไขได้หลายแบบ เหล่านี้จะอยู่ใต้แอตทริบิวต์ที่ข้อเสนอมีผลต่อและ - เช่นเดียวกับข้อเสนอของกิจกรรม - มีสีเทา แถวของแอตทริบิวต์เดิมมีสีฟ้าถ้ามีข้อเสนอสำหรับรายการนั้น
 
-Using the modify button will bring up the attribute creation view, with all data filled out with the attribute's currently stored data.
+การใช้ปุ่มแก้ไขจะทำให้มุมมองการสร้างแอตทริบิวต์มีข้อมูลทั้งหมดที่เต็มไปด้วยข้อมูลที่เก็บไว้ในปัจจุบันของแอตทริบิวต์
 
 **Event Discussion Thread**
 
-Each event has its own assigned discussion where users (that are eligible to see the event) can participate in an open discussion. The users are anonymised in the messages, all that other users will see is their user ID number and their organisation. To post a message on the Event Discussion, either use the reply button on a previous post or use the quickresponse field at the bottom of the page.
-Each post is made up of the following:
-*   **Date:**The date when the post was created.
-*   **Post navigation:**This should the post's ID as well as a link to jump to the top of the discussion thread on the page itself.
-*   **Organisation logo:**If such an image exists for the organisation that has posted the message, then the logo is shown.
-*   **Message:**The body of the post itself. This can also include automatically generated links to other events and threads as well as show quoted test in embedded bubbles. Editing an event will also append a post with a message indicating that it was edited together with the timestamp of the edit.
-*   **User:**The e-mail address of the poster if he/she is from the organisation as the current user. Alternatively a generated sting is shown that includes the user ID of the user, so that his/her e-mail address could remain hidden whilst still being identifiable.
-*   **Action buttons:**Edit, Delete and Reply. The first two of the three options are only available to the poster of the message or a site admin. Quoting a post will automatically include the original message in [quote] tags.
+แต่ละเหตุการณ์มีการอภิปรายที่ได้รับมอบหมายซึ่งผู้ใช้ (ซึ่งมีสิทธิ์เข้าร่วมกิจกรรม) สามารถเข้าร่วมการอภิปรายแบบเปิด ผู้ใช้จะไม่ระบุชื่อในข้อความทั้งหมดที่ผู้ใช้รายอื่นเห็นคือหมายเลขรหัสผู้ใช้และองค์กรของตน หากต้องการโพสต์ข้อความในการสนทนากิจกรรมให้ใช้ปุ่มตอบกลับในโพสต์ก่อนหน้าหรือใช้ช่องตอบสนองรวดเร็วที่ด้านล่างของหน้า
+แต่ละโพสต์ประกอบด้วยรายการต่อไปนี้:
+*   **Date:**วันที่โพสต์ถูกสร้างขึ้น.
+*   **Post navigation:**รหัสโพสต์นี้ควรเป็นลิงก์และลิงก์ไปยังด้านบนของหัวข้อสนทนาในหน้าเว็บนั้น
+*   **Organisation logo:**หากมีภาพดังกล่าวปรากฏอยู่ในองค์กรที่โพสต์ข้อความโลโก้จะปรากฏขึ้น.
+*   **Message:**เนื้อหาของโพสต์เอง นอกจากนี้ยังสามารถรวมลิงก์ที่สร้างขึ้นโดยอัตโนมัติให้กับกิจกรรมและชุดข้อความอื่น ๆ เช่นเดียวกับการแสดงการทดสอบที่ยกมาในฟองอากาศแบบฝัง การแก้ไขเหตุการณ์จะเป็นการต่อท้ายโพสต์ด้วยข้อความที่ระบุว่ามีการแก้ไขพร้อมกับการประทับเวลาของการแก้ไข
+*   **User:**อีเมลแอดเดรสของผู้ลงโฆษณาถ้าเขา / เธอมาจากองค์กรในฐานะผู้ใช้ปัจจุบัน นอกจากนี้ยังมีการสร้าง sting ที่สร้างขึ้นซึ่งรวมถึง ID ผู้ใช้ของผู้ใช้เพื่อให้อีเมล์แอดเดรสของเขา / เธอสามารถซ่อนตัวได้ในขณะที่ยังสามารถระบุตัวตนได้
+*   **Action buttons:**แก้ไข, ลบและตอบ สองสามตัวเลือกแรกสำหรับผู้โพสต์ข้อความหรือผู้ดูแลระบบไซต์เท่านั้น การอ้างถึงโพสต์จะรวมข้อความต้นฉบับไว้ในแท็ก [quote] โดยอัตโนมัติ
 
-Here is a list of the various tools you can use while using this feature:
-*   **Pagination:** There are 5 posts visible on each event page, if there have been more messages posted, use the previous and next button to navigate through the thread. This will not reload the rest of the page.
-*   **Discussion Tags:** Users can quote something by encapsulating it in [quote][/quote] tags, they can create a link to another event with the [event][/event] tags or to another discussion thread with [thread][/thread].
-*   **Quick Post:** Adding a post will take the user to a separate add Post page, something that can be a bit of an inconvenience. To avoid this, there is a quick post button, where users can add messages on the fly without having to reload the page. On top of the quick post field, 3 buttons allow users to generate quote, event and thread tags quickly.
+
+นี่คือรายการเครื่องมือต่างๆที่คุณสามารถใช้ในขณะที่ใช้คุณลักษณะนี้:
+*   **Pagination:** มีการโพสต์ 5 ข้อความในหน้ากิจกรรมแต่ละครั้งหากมีการโพสต์ข้อความมากขึ้นให้ใช้ปุ่มก่อนหน้าและถัดไปเพื่อเลื่อนไปตามหัวข้อ การดำเนินการนี้จะไม่โหลดส่วนที่เหลือของหน้าอีกครั้ง
+*   **Discussion Tags:** Uผู้ใช้สามารถพูดอะไรบางอย่างโดยการ encapsulating ในแท็ก [quote] [/ quote] พวกเขาสามารถสร้างลิงก์ไปยังเหตุการณ์อื่นได้โดยใช้แท็ก [event] [/ event] หรือหัวข้อสนทนาอื่นที่มี [thread][/thread].
+*   **Quick Post:** การเพิ่มโพสต์จะนำผู้ใช้ไปยังหน้าเพิ่มโพสต์แยกต่างหากซึ่งอาจเป็นความไม่สะดวกได้บ้าง เพื่อหลีกเลี่ยงปัญหานี้มีปุ่มโพสต์ด่วนซึ่งผู้ใช้สามารถเพิ่มข้อความได้ทันทีโดยไม่ต้องโหลดหน้าใหม่ ด้านบนของฟิลด์โพสต์อย่างรวดเร็วปุ่ม 3 ปุ่มช่วยให้ผู้ใช้สามารถสร้างแท็กราคาอ้างและเหตุการณ์ได้อย่างรวดเร็ว
 
 
 ### Event History:
 
-View the logs of the event that show how the event has changed over time, including the contribution from other organisations in the form of proposals. There are two ways to get to this view, either by clicking on View Event History on the side menu of an event view, or by clicking on a contribing organisation's logo on the event view. The latter will show a restricted form of the logs, showing only Proposals created by the selected organisation. The fields shown in this view are as described as follows:
-*   **Org**: The logo (or in the lack thereof a string representation) of the organisation.
-*   **Action**: Each entry in the log happens during an action, such as the creation, modification or deletion of data and some special actions (such as accepting a proposal). This field shows which action caused the entry to be created.
-*   **Model**: As described above, a log entry is generated on certain actions. This field shows which type of data was affected that caused the log entry to be created (such as a change to the event, the creation of an attribute, the discarding of a proposal, etc).
-*   **Title**: This is a short description of the change itself and it is not nearly as detailed as the information administrators get in the audit logs. However, for attributes and proposals the category / type and value of the created or edited attribute is shown.
-*   **Created**: The date and time of the log entry's creation.
+ดูบันทึกของกิจกรรมที่แสดงให้เห็นว่ากิจกรรมมีการเปลี่ยนแปลงอย่างไรเมื่อเวลาผ่านไปรวมถึงผลงานจากองค์กรอื่น ๆ ในรูปแบบของข้อเสนอ มีสองวิธีในการเข้าสู่มุมมองนี้โดยคลิกที่ดูประวัติเหตุการณ์ในเมนูด้านข้างของมุมมองเหตุการณ์หรือคลิกที่โลโก้ขององค์กรที่มีส่วนร่วมในมุมมองกิจกรรม หลังจะแสดงรูปแบบที่ จำกัด ของบันทึกซึ่งแสดงเฉพาะข้อเสนอที่สร้างขึ้นโดยองค์กรที่เลือกเท่านั้น ฟิลด์ที่แสดงในมุมมองนี้มีลักษณะดังนี้:
+*   **Org**: โลโก้ (หรือขาดการแทนสตริง) ขององค์กร
+*   **Action**: แต่ละรายการในบันทึกเกิดขึ้นระหว่างการกระทำเช่นการสร้างแก้ไขหรือลบข้อมูลและการดำเนินการพิเศษ (เช่นการยอมรับข้อเสนอ) ฟิลด์นี้แสดงการกระทำที่ทำให้รายการถูกสร้างขึ้น
+*   **Model**: ตามที่ได้อธิบายไว้ข้างต้นจะมีการสร้างรายการบันทึกในการดำเนินการบางอย่าง ฟิลด์นี้แสดงประเภทของข้อมูลที่ได้รับผลกระทบที่ทำให้เกิดรายการบันทึกที่จะสร้างขึ้น (เช่นการเปลี่ยนแปลงเหตุการณ์การสร้างแอตทริบิวต์การทิ้งข้อเสนอ ฯลฯ )
+*   **Title**: นี่เป็นคำอธิบายสั้น ๆ เกี่ยวกับการเปลี่ยนแปลงและไม่เกือบจะละเอียดเท่าที่ผู้ดูแลระบบได้รับในบันทึกการตรวจสอบ อย่างไรก็ตามสำหรับแอตทริบิวต์และข้อเสนอประเภท / ประเภทและมูลค่าของแอ็ตทริบิวต์ที่สร้างหรือแก้ไขจะแสดงขึ้น
+*   **Created**: วันที่และเวลาของการสร้างรายการบันทึก
 
 ### Listing all attributes:
-	Apart from having a list of all the events, it is also possible to get a list of all the stored attributes in the system by clicking on the list attributes button. The produced list of attributes will include the followings fields:
+	นอกเหนือจากการมีรายการเหตุการณ์ทั้งหมดแล้วคุณยังสามารถรับรายการคุณลักษณะที่เก็บไว้ทั้งหมดในระบบโดยคลิกที่ปุ่มรายการคุณลักษณะ รายการคุณลักษณะที่ผลิตจะประกอบด้วยฟิลด์ต่อไปนี้:
 
 ![Use the buttons to the right to view the event that this attribute belongs to or to modify/delete the attribute.](figures/list_attributes2.png)
-*   **Event:** This is the ID number of the event that the attribute is tied to. If an event belongs to your organisation, then this field will be coloured red.
-*   **Org:** The organisation that has created the event.
-*   **Category:** The category of the attribute, showing what the attribute describes (for example the malware's payload). For more information on categories, go to section xy
-*   **Type:** The type of the value contained in the attribute (for example a source IP address). For more information on types, go to section xy
-*   **Value:** The actual value of the attribute, describing an aspect, defined by the category and type fields of the malware (for example 11.11.11.11).
-*   **Comment:** An optional contextual comment attached to the attribute.
-*   **IDS:** Shows whether the attribute has been flagged for NIDS signature generation or not.
-*   **Actions:** A set of buttons that allow you to view the event that the attribute is tied to, to edit the attribute (using the same view as what is used to set up attributes, but filled out with the attribute's current data) and a delete button.
+*   **Event:** นี่คือหมายเลขรหัสของเหตุการณ์ที่แอตทริบิวต์ถูกผูกไว้ หากเหตุการณ์เป็นขององค์กรของคุณฟิลด์นี้จะเป็นสีแดง
+*   **Org:**  องค์กรที่สร้างกิจกรรม
+*   **Category:** ประเภทของแอตทริบิวต์แสดงแอตทริบิวต์ที่อธิบาย (ตัวอย่างเช่นปริมาณข้อมูลของมัลแวร์) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับประเภทต่างๆไปที่ส่วน xy
+*   **Type:** ประเภทของค่าที่มีอยู่ในแอตทริบิวต์ (เช่นที่อยู่ IP ต้นทาง) สำหรับข้อมูลเพิ่มเติมเกี่ยวกับประเภทต่างๆให้ไปที่ส่วน xy
+*   **Value:** ค่าที่แท้จริงของแอตทริบิวต์อธิบายด้านที่กำหนดโดยประเภทและประเภทของมัลแวร์ (เช่น 11.11.11.11)
+*   **Comment:** ความคิดเห็นตามบริบทที่เลือกให้กับแอตทริบิวต์
+*   **IDS:** แสดงแอ็ตทริบิวต์ได้รับการตั้งค่าสถานะไว้สำหรับการสร้างลายเซ็น NIDS หรือไม่
+*   **Actions:** ชุดของปุ่มที่ช่วยให้คุณสามารถดูเหตุการณ์ที่แอ็ตทริบิวต์ถูกผูกไว้เพื่อแก้ไขแอ็ตทริบิวต์ (ใช้มุมมองเดียวกับสิ่งที่ใช้ในการตั้งค่าแอตทริบิวต์ แต่เติมเต็มด้วยแอตทริบิวต์ปัจจุบัน ข้อมูล) และปุ่มลบ
 
 ### Searching for attributes:
 
-Apart from being able to list all events, it is also possible to search for data contained in the value field of an attribute, by clicking on the "Search Attributes" button.
+นอกเหนือจากความสามารถในการแสดงรายการกิจกรรมทั้งหมดแล้วคุณยังสามารถค้นหาข้อมูลที่มีอยู่ในฟิลด์ค่าของแอตทริบิวต์ด้วยการคลิกที่ปุ่ม "Search Attributes"
 
 ![You can search for attributes by searching for a phrase contained in its value. Narrow your search down by selecting a type and/or a category which the event has to belong to.](figures/search_attribute.png)
 
-This will bring up a form that lets you enter one or several search strings (separate search strings with line breaks) that will be compared to the values of all attributes, along with options to narrow down the search based on category and type. The entered search string has to be an exact match with (the sub-string of) a value. A second text field makes it possible to enter event IDs for events that should be excluded from the search (again, each line represents an event ID to be excluded). The third text field allows the user to restrict the results to attributes from certain organisations or to attributes not created by certain other organisations, using the above described syntax.
-The list generated by the search will look exactly the same as listing all attributes, except that only the attributes that matched the search criteria will be listed (to find out more about the list attributes view, [click here](categories-and-types)). The search parameters will be shown above the produced list and the search terms will be highlighted.
-The last option is a checkbox that restricts all of the results to attributes that are marked as IDS signatures.
+ซึ่งจะนำรูปแบบที่ช่วยให้คุณสามารถป้อนสตริงการค้นหาหนึ่งหรือหลายสตริง (สตริงการค้นหาที่แยกจากตัวแบ่งบรรทัด) ที่จะเปรียบเทียบกับค่าของแอตทริบิวต์ทั้งหมดพร้อมกับตัวเลือกในการ จำกัด การค้นหาตามประเภทและประเภท สตริงการค้นหาที่ป้อนต้องมีการจับคู่แบบตรงทั้งหมดกับ (ค่าย่อย) ของค่า ฟิลด์ข้อความที่สองช่วยให้สามารถใส่รหัสเหตุการณ์สำหรับเหตุการณ์ที่ควรยกเว้นจากการค้นหา (อีกครั้งแต่ละบรรทัดแสดงถึงรหัสกิจกรรมที่จะถูกยกเว้น) ฟิลด์ข้อความที่สามช่วยให้ผู้ใช้สามารถ จำกัด ผลลัพธ์จากแอตทริบิวต์จากบางองค์กรหรือแอตทริบิวต์ที่ไม่ได้สร้างขึ้นโดยองค์กรอื่น ๆ โดยใช้ไวยากรณ์ที่อธิบายไว้ข้างต้น
+รายการที่สร้างโดยการค้นหาจะมีลักษณะตรงกับรายการแอตทริบิวต์ทั้งหมดยกเว้นว่าเฉพาะแอตทริบิวต์ที่ตรงกับเกณฑ์การค้นหาเท่านั้นที่จะปรากฏในรายการ (เพื่อหาข้อมูลเพิ่มเติมเกี่ยวกับมุมมองรายการแอตทริบิวต์ [คลิกที่นี่] (หมวดหมู่และชนิด )) พารามิเตอร์การค้นหาจะแสดงเหนือรายการที่ผลิตและจะเน้นข้อความค้นหา
+ตัวเลือกสุดท้ายคือช่องทำเครื่องหมายที่ จำกัด ผลลัพธ์ทั้งหมดให้กับแอตทริบิวต์ที่ทำเครื่องหมายเป็น IDS ซิกเนเจอร์
+
 
 !["You can view the event that an attribute belongs to with the view button, or you can edit/delete the attribute via the buttons on the right."](figures/search_attribute_result.png)
 
 
-## Updating and modifying events and attributes:
+## การอัพเดตและปรับเปลี่ยนเหตุการณ์และแอตทริบิวต์:
 
-Every event and attribute can easily be edited. First of all it is important to find the event or attribute that is to be edited, using any of the methods mentioned in the section on [browsing past events](#browsing_events).
-Once it is found, the edit button (whether it be under actions when events/attributes get listed or simply on the event view) will bring up the same screen as what is used to create the entry of the same type (for an event it would be the event screen as [seen here](#Creating an event), for an attribute the attribute screen as [described here](#add-attributes-to-the-event)).
-Keep in mind that editing any event (either directly or indirectly through an attribute) will unpublish it, meaning that you'll have to publish it (through the event view) again once you are done.
+ทุกเหตุการณ์และแอตทริบิวต์สามารถแก้ไขได้อย่างง่ายดาย ประการแรกเป็นเรื่องสำคัญที่ต้องค้นหาเหตุการณ์หรือแอตทริบิวต์ที่จะแก้ไขโดยใช้วิธีการใด ๆ ที่กล่าวถึงในส่วน [browsing past events](#browsing_events).
+Once it is found,เมื่อพบปุ่มแก้ไข (ไม่ว่าจะเป็นภายใต้การดำเนินการเมื่อเหตุการณ์ / แอตทริบิวต์ได้รับการจดทะเบียนหรือเพียงแค่ในมุมมองเหตุการณ์) จะนำมาขึ้นหน้าจอเดียวกับสิ่งที่ใช้ในการสร้างรายการประเภทเดียวกัน (สำหรับเหตุการณ์นั้น จะเป็นหน้าจอเหตุการณ์ที่ชื่อว่า [seen here](#Creating an event),  สำหรับแอตทริบิวต์หน้าจอแอตทริบิวต์เป็น  [described here](#add-attributes-to-the-event)).
+โปรดทราบว่าการแก้ไขกิจกรรมใด ๆ (ไม่ว่าโดยตรงหรือโดยอ้อมโดยใช้แอตทริบิวต์) จะเป็นการยกเลิกการเผยแพร่ซึ่งหมายความว่าคุณจะต้องเผยแพร่ (ผ่านมุมมองกิจกรรม) อีกครั้งเมื่อทำเสร็จแล้ว
 
 ## Tagging:
 
-As described earlier, users with tagging rights can arbitrarily tag events using tags chosen from a pool of available options. If you have tagging privileges and would like to create a new tag, navigate to Event Actions - Add Tag. You'll be presented with the following form:
+ตามที่อธิบายไว้ก่อนหน้านี้ผู้ใช้ที่มีสิทธิ์ติดแท็กสามารถแท็กเหตุการณ์โดยพลการโดยใช้แท็กที่เลือกจากพูลของตัวเลือกที่ใช้ได้ หากคุณมีสิทธิ์ในการติดแท็กและต้องการสร้างแท็กใหม่ให้ไปที่การดำเนินการกิจกรรม - เพิ่มแท็ก คุณจะได้รับแบบฟอร์มต่อไปนี้:
 
 ![Enter a name for the tag and click on the color field to be able to pick a colour for it.](figures/tag.png)
 
-Fill out the following fields:
-*   **Name**: Pick a name for the tag. Try to use consistent naming conventions across your instance, to avoid confusion.
-*   **Colour**: You can choose a colour for the tag by clicking on the colour field and using the colour picker tool. Try to avoid having duplicate or similar looking colours to help avoid confusion.
+กรอกข้อมูลในช่องต่อไปนี้:
+*   **Name**: เลือกชื่อสำหรับแท็ก พยายามใช้อนุสัญญาในการตั้งชื่อที่ตรงกันในกรณีของคุณเพื่อหลีกเลี่ยงความสับสน
+*   **Colour**: คุณสามารถเลือกสีสำหรับแท็กโดยคลิกที่ช่องสีและใช้เครื่องมือเลือกสี พยายามหลีกเลี่ยงการซ้ำซ้อนหรือคล้ายคลึงกันเพื่อหลีกเลี่ยงความสับสน
 
-## Templating:
+## ต้นแบบ:
 
-Newer users can easily be overwhelmed by having to manually populate events with attributes without any guidance. What sort of information should go into the event? What should be the category and type of a C2 IP? Templates allow users to use simple forms to populate events.
-Even though MISP ships with a few default templates, it is possible for users (with the appropriate templating privilege) to create new templates for their users or for all users of the instance. Let's look at how you can create a template.
-First go to Event Actions - Add Template to go to the event creation view.
-
+ผู้ใช้ใหม่ ๆ สามารถรับเหตุการณ์ได้อย่างง่ายดายโดยไม่ต้องมีคำแนะนำใด ๆ ด้วยตนเอง ข้อมูลประเภทใดที่ควรเข้าร่วมกิจกรรม? ประเภทและประเภทของ C2 IP ควรเป็นอย่างไร? แม่แบบช่วยให้ผู้ใช้สามารถใช้ฟอร์มง่ายๆในการใส่ข้อมูลกิจกรรม
+แม้ว่า MISP จะมีเทมเพลตดีฟอลต์เพียงไม่กี่เครื่องผู้ใช้ (มีสิทธิ์เทมเพลตที่เหมาะสม) สามารถสร้างเทมเพลตใหม่สำหรับผู้ใช้หรือผู้ใช้ทั้งหมดของอินสแตนซ์ได้ ลองดูวิธีที่คุณสามารถสร้างเทมเพลตได้
+ก่อนอื่นให้ไปที่การดำเนินการกิจกรรม - เพิ่มแม่แบบเพื่อไปที่มุมมองการสร้างกิจกรรม
 ![Fill in the generic information about the template.](figures/create_template.png)
 
-The following fields have to be filled out:
-*   **Name**: The name of the template should describe what type of an event it should be used to generate attributes.
-*   **Tags**: You can attach tags to the template - an event populated using the template would automatically receive the tag(s). Add new tags using the + button. If you chnage your mind about a tag you can remove it with the cross next to the tag name.
-*   **Event Description**: A short description about the events that this template should be used for.
-*   **Share this template with others**: The template can be set to be usable by any organisation on the instance or only by the one that has created it.
+ต้องกรอกข้อมูลต่อไปนี้:
+*   **Name**: ชื่อของเทมเพลตควรอธิบายชนิดของเหตุการณ์ที่ควรจะใช้เพื่อสร้างแอตทริบิวต์
+*   **Tags**: คุณสามารถแนบแท็กกับเทมเพลตได้ - กิจกรรมที่ใช้งานเทมเพลตจะได้รับแท็กโดยอัตโนมัติ เพิ่มแท็กใหม่โดยใช้ปุ่ม + หากคุณอ่านใจเกี่ยวกับแท็กคุณสามารถลบออกด้วยเครื่องหมายกากบาทถัดจากชื่อแท็ก
+*   **Event Description**: คำอธิบายสั้น ๆ เกี่ยวกับเหตุการณ์ที่แม่แบบนี้ควรใช้
+*   **Share this template with others**: เทมเพลตสามารถตั้งค่าให้ใช้งานได้โดยทุกองค์กรในอินสแตนซ์หรือเฉพาะที่สร้างขึ้นเท่านั้น
 
-Once the skeleton template is created, you can start populating the template with data. There are 3 types of elements that can be used during the creation of a template: attribute, file and text elements. Text elements divide the template into sections with an information field, followed by all of the attribute/file fields until a new text field is read. Don't worry about the order of the elements during creation, they can be re-arranged using drag & drop. Let's look at the 3 element types:
+เมื่อสร้างเทมเพลตโครงกระดูกแล้วคุณสามารถเริ่มต้นสร้างเทมเพลตด้วยข้อมูลได้ มีองค์ประกอบ 3 ประเภทที่สามารถใช้ในระหว่างการสร้างเทมเพลต: แอตทริบิวต์ไฟล์และองค์ประกอบข้อความ องค์ประกอบข้อความแบ่งแม่แบบเป็นส่วนที่มีฟิลด์ข้อมูลตามด้วยฟิลด์แอตทริบิวต์ / ไฟล์จนกว่าจะมีการอ่านฟิลด์ข้อความใหม่ อย่ากังวลกับลำดับขององค์ประกอบระหว่างการสร้างพวกเขาสามารถจัดเรียงใหม่โดยใช้การลากและวาง ลองดูที่ประเภทองค์ประกอบ 3 อย่าง:
 
-**Attribute Element**
+**องค์ประกอบแอตทริบิวต์**
 
 ![This element will generate regular attributes based on user entry.](figures/template_attribute.png)
 
-The following fields have to be filled out:
-*   **Name**: The field name that will be presented to the user.
-*   **Description**: A brief description of the element. Make sure that you provide sufficient information to the user to make it obvious what is expected.
-*   **Category**: The category used for any attributes created using this template element.
-*   **Type**: The type or complex type used for any attributes created using this template element. Complex types allow for several related types to be used on data entry. For example, a "file" complex type element allows for filenames and hashes.
-*   **Use Complex types**: If the category permits it, switch to a complex type using this checkbox.
-*   **Automatically mark for IDS**: If checked, any attributes generated using this element will be marked for IDS exporting.
-*   **Mandatory element**: If the elemnt is marked as mandatory, then the template form can only be submitted by users if this field is filled out.
-*   **Batch import element**: Allow for multiple values to be entered (separated by line breaks).
+ต้องกรอกข้อมูลต่อไปนี้:
+*   **Name**:  ชื่อฟิลด์ที่จะนำเสนอต่อผู้ใช้
+*   **Description**: คำอธิบายสั้น ๆ ขององค์ประกอบ ตรวจสอบให้แน่ใจว่าคุณได้ให้ข้อมูลที่เพียงพอแก่ผู้ใช้เพื่อให้เห็นได้อย่างชัดเจนว่าจะเกิดอะไรขึ้น
+*   **Category**: หมวดหมู่ที่ใช้สำหรับแอตทริบิวต์ใด ๆ ที่สร้างโดยใช้เทมเพลตเทมเพลตนี้
+*   **Type**: ชนิดหรือชนิดที่ซับซ้อนที่ใช้สำหรับแอตทริบิวต์ใด ๆ ที่สร้างโดยใช้เทมเพลตเทมเพลตนี้ ชนิดที่ซับซ้อนช่วยให้สามารถใช้งานประเภทต่างๆได้หลายแบบในการป้อนข้อมูล ตัวอย่างเช่น "ไฟล์" องค์ประกอบชนิดที่ซับซ้อนช่วยให้ชื่อไฟล์และการแฮช
+*   **Use Complex types**: ถ้าอนุญาตประเภทนี้ให้เปลี่ยนเป็นชนิดที่ซับซ้อนโดยใช้ช่องทำเครื่องหมายนี้
+*   **Automatically mark for IDS**: หากเลือกไว้คุณลักษณะใด ๆ ที่สร้างโดยใช้อิลิเมนต์นี้จะถูกทำเครื่องหมายสำหรับการส่งออก IDS
+*   **Mandatory element**: ถ้าเครื่องหมาย elemnt ถูกระบุว่าเป็นข้อบังคับจากนั้นฟอร์มผู้ใช้จะสามารถส่งแบบฟอร์มเทมเพลตได้เฉพาะกรณีที่ฟิลด์นี้กรอกข้อมูลครบถ้วน
+*   **Batch import element**: อนุญาตให้มีการป้อนค่าหลายค่า (คั่นด้วยเครื่องหมายบรรทัด)
 
 **File Element**
 
 ![This element will generate attachments based on user entry.](figures/template_file.png)
 
-The following fields have to be filled out:
-*   **Name**: The field name that will be presented to the user.
-*   **Description**: A brief description of the element. Make sure that you provide sufficient information to the user to make it obvious what is expected.
-*   **Category**: The category to be used by all attachments uploaded through this element.
-*   **Malware**: If the uploaded files are malicious and should be encrypted and password protected, mark this checkbox.
-*   **Mandatory element**: If it should be required to upload an attachment, check this checkbox.
-*   **Batch import element**: Ticking this checkbox allows users to upload several files using this element.
+ต้องกรอกข้อมูลต่อไปนี้:
+*   **Name**: ชื่อฟิลด์ที่จะนำเสนอต่อผู้ใช้
+*   **Description**: คำอธิบายสั้น ๆ ขององค์ประกอบ ตรวจสอบให้แน่ใจว่าคุณได้ให้ข้อมูลที่เพียงพอแก่ผู้ใช้เพื่อให้เห็นได้อย่างชัดเจนว่าจะเกิดอะไรขึ้น
+*   **Category**: ประเภทที่จะใช้โดยสิ่งที่แนบทั้งหมดที่อัพโหลดผ่านองค์ประกอบนี้
+*   **Malware**: หากไฟล์ที่อัปโหลดเป็นอันตรายและควรได้รับการเข้ารหัสและป้องกันด้วยรหัสผ่านให้ทำเครื่องหมายที่ช่องทำเครื่องหมายนี้
+*   **Mandatory element**: หากจำเป็นต้องอัปโหลดสิ่งที่แนบมาให้ทำเครื่องหมายในช่องนี้
+*   **Batch import element**: การเลือกช่องทำเครื่องหมายนี้ช่วยให้ผู้ใช้สามารถอัปโหลดไฟล์ต่างๆโดยใช้องค์ประกอบนี้ได้
 
 **Text Element**
 
