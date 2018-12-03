@@ -435,46 +435,45 @@ Once it is found,เมื่อพบปุ่มแก้ไข (ไม่ว�
 ![Use the export features here to quickly download data in various formats](figures/export_bg.png)
 
 #### Exporting search results and individual events
-Apart from the options offered by the export pages, it's also possible to export all events involved in a search attribute result table, by using the "Download results as XML" button on the left menu bar.
-
+นอกเหนือจากตัวเลือกที่นำเสนอโดยหน้าการส่งออกแล้วคุณยังสามารถส่งออกกิจกรรมทั้งหมดที่เกี่ยวข้องในตารางผลการค้นหาแอตทริบิวต์โดยใช้ปุ่ม "ดาวน์โหลดผลลัพธ์เป็น XML" ที่แถบเมนูด้านซ้าย
 ![Download a .xml from all the events that are shown through an attribute in the search results.](figures/export_search.png)
 
-Each event's view has its own export feature, both as an XML export and as a .ioc file. To reach these features, just navigate to an event and use the appropriate buttons on the right side.
+มุมมองของเหตุการณ์แต่ละครั้งมีคุณลักษณะการเอ็กซ์พอร์ตของตัวเองทั้งในรูปแบบ XML export และเป็นไฟล์. ioc หากต้องการเข้าถึงคุณลักษณะเหล่านี้เพียงไปที่กิจกรรมและใช้ปุ่มที่เหมาะสมทางด้านขวา
 
 ![Download a .xml or a .ioc of the event.](figures/export_search.png)
 
 ## Connecting to other instances:
 
-Apart from being a self contained repository of attacks/malware, one of the main features of MISP is its ability to connect to other instances and share (parts of) its information. The following options allow you to set up and maintain such connections.
+นอกเหนือจากการเป็นพื้นที่เก็บข้อมูลที่มีการโจมตี / มัลแวร์หนึ่งในคุณสมบัติหลักของ MISP คือความสามารถในการเชื่อมต่อกับอินสแตนซ์อื่น ๆ และแชร์ข้อมูล (บางส่วน) ของข้อมูล ตัวเลือกต่อไปนี้ช่วยให้คุณสามารถตั้งค่าและบำรุงรักษาการเชื่อมต่อดังกล่าวได้
 
 ### Setting up a connection to another server:
 
-In order to share data with a remote server via pushes and pulls, you need to request a valid authentication key from the hosting organisation of the remote instance. When clicking on List Servers and then on New Server, a form comes up that needs to be filled out in order for your instance to connect to it. The following fields need to be filled out:
+ในการแชร์ข้อมูลกับเซิร์ฟเวอร์ระยะไกลผ่าน pushes และ pulls คุณต้องขอคีย์การตรวจสอบสิทธิ์ที่ถูกต้องจากองค์กรโฮสติ้งของอินสแตนซ์ระยะไกล เมื่อคลิกที่ List Servers จากนั้นใน New Server ฟอร์มจะปรากฏขึ้นเพื่อกรอกข้อมูลเพื่อให้อินสแตนซ์ของคุณสามารถเชื่อมต่อได้ ต้องกรอกข้อมูลต่อไปนี้:
 
 ![Make sure that you enter the authentication key that you have been given by the hosting organisation of the remote instance, instead of the one you have gotten from this one.](figures/add_server.png)
 
-*   **Base URL:** The URL of the remote server.
-*   **Organization:** The organisation that runs the remote server. It is very impoportant that this setting is filled out exactly as the organisation name set up in the bootstrap file of the remote instance.
-*   **Authkey:** The authentication key that you have received from the hosting organisation of the remote instance.
-*   **Push:** This check-box controls whether your server is allowed to push to the remote instance.
-*   **Pull:** This check-box controls whether your server can request to pull all data from the remote instance.
-*   **Self Signed:** Ticking this checkbox will allow syncing with instances using self-signed certificates.
-*   **Certificate File:** If the instance that you want to connect to has their entire own certificate chain, you can use this to import a .pem file with it and override CakePHP's standard root CA file.
+*   **Base URL:** URL ของเซิร์ฟเวอร์
+*   **Organization:** องค์กรที่รันเซิร์ฟเวอร์ระยะไกล ไม่เป็นไรว่าการตั้งค่านี้จะเต็มไปด้วยชื่อองค์กรที่ตั้งค่าไว้ในไฟล์ bootstrap ของอินสแตนซ์
+*   **Authkey:** คีย์การตรวจสอบสิทธิ์ที่คุณได้รับจากองค์กรโฮสติ้งของอินสแตนซ์
+*   **Push:** กล่องกาเครื่องหมายนี้จะควบคุมว่าเซิร์ฟเวอร์ของคุณสามารถกดไปยังอินสแตนซ์ระยะไกลได้หรือไม่
+*   **Pull:** กล่องกาเครื่องหมายนี้จะควบคุมว่าเซิร์ฟเวอร์ของคุณสามารถขอให้ดึงข้อมูลทั้งหมดจากอินสแตนซ์แบบรีโมตได้หรือไม่
+*   **Self Signed:** การเลือกช่องทำเครื่องหมายนี้จะทำให้สามารถซิงค์กับอินสแตนซ์โดยใช้ใบรับรองที่ลงนามด้วยตนเอง
+*   **Certificate File:** หากอินสแตนซ์ที่คุณต้องการเชื่อมต่อมีห่วงโซ่ใบรับรองทั้งหมดของตัวเองคุณสามารถใช้ไฟล์นี้เพื่อนำเข้าไฟล์ .pem ด้วยและแทนที่ไฟล์ root CA มาตรฐานของ CakePHP
 
-**If you are an administrator**, trying to allow another instance to connect to your own, it is vital that two rules are followed when setting up a synchronisation account:
-*   The synchronisation user has to have the sync permission and full read/write/publish privileges turned on
-*   Both the sync user and the organisation setting in your instance's Config/bootstrap.php file have to match the organisation identifier of the hosting organisation.
+** หากคุณเป็นผู้ดูแลระบบ ** พยายามอนุญาตให้อินสแตนซ์อื่นเชื่อมต่อกับบัญชีของคุณเองจำเป็นต้องมีการปฏิบัติตามกฎสองข้อเมื่อตั้งค่าบัญชีการซิงโครไนซ์:
+* ผู้ใช้การซิงค์ต้องได้รับสิทธิ์ในการซิงค์และเปิดใช้สิทธิ์การอ่าน / เขียน / เผยแพร่เต็มรูปแบบ
+* ทั้งผู้ใช้ที่ซิงค์และการตั้งค่าองค์กรในไฟล์ Config / bootstrap.php ของอินสแตนซ์จะต้องตรงกับตัวระบุองค์กรขององค์กรโฮสติ้ง
 
 ### Browsing the currently set up server connections and interacting with them:
 
-If you ever need to change the data about the linked servers or remove any connections, you have the following options to view and manipulate the server connections, when clicking on List Servers: (you will be able to see a list of all servers that your server connects to, including the base address, the organisation running the server the last pushed and pulled event IDs and the control buttons.).
+ถ้าคุณต้องการเปลี่ยนข้อมูลเกี่ยวกับเซิร์ฟเวอร์ที่เชื่อมโยงหรือลบการเชื่อมต่อใด ๆ คุณมีตัวเลือกต่อไปนี้เพื่อดูและจัดการการเชื่อมต่อเซิร์ฟเวอร์เมื่อคลิกที่เซิร์ฟเวอร์รายการ: (คุณจะสามารถดูรายการเซิร์ฟเวอร์ทั้งหมดที่ เซิร์ฟเวอร์เชื่อมต่อรวมถึงที่อยู่พื้นฐานองค์กรที่ใช้งานเซิร์ฟเวอร์ซึ่งเป็นเหตุการณ์ล่าสุดที่ถูกดึงและดึงออกมาและปุ่มควบคุม)
 
 ![Apart from editing / deleting the link to the remote server, you can issue a push all or pull all command from here.](figures/list_servers.png)
 
-*   **Editing the connection to the:** By clicking edit a view, [that is identical to the new instance view](#setting-up-a-connection-to-another-server), is loaded, with all the current information of the instance pre-entered.
-*   **Deleting the connection to the instance:** Clicking the delete button will delete the link to the instance.
-*   **Push all:** By clicking this button, all events that are eligible to be pushed on the instance you are on will start to be pushed to the remote instance. Events and attributes that exist on the far end will be updated.
-*   **Pull all:** By clicking this button, all events that are set to be pull-able or full access on the remote server will be copied to this instance. Existing events will not be updated.
+*   **Editing the connection to the:** โดยการคลิกแก้ไขข้อมูลพร็อพเพอร์ตี้, [that is identical to the new instance view](#setting-up-a-connection-to-another-server), จะถูกโหลดพร้อมกับกระแสทั้งหมด ข้อมูลของอินสแตนซ์ที่ป้อนไว้ล่วงหน้า
+*   **Deleting the connection to the instance:** การคลิกที่ปุ่มลบจะเป็นการลบลิงค์ไปยังอินสแตนซ์
+*   **Push all:** มื่อคลิกที่ปุ่มนี้กิจกรรมทั้งหมดที่มีสิทธิ์ได้รับการผลักดันในอินสแตนซ์ที่คุณกำลังจะเริ่มต้นจะถูกผลักไปยังอินสแตนซ์ระยะไกล เหตุการณ์และคุณลักษณะที่มีอยู่ในส่วนท้ายสุดจะได้รับการอัปเดต
+*   **Pull all:** โดยการคลิกที่ปุ่มนี้เหตุการณ์ทั้งหมดที่กำหนดให้สามารถดึงข้อมูลหรือเข้าถึงแบบเต็มรูปแบบบนเซิร์ฟเวอร์ระยะไกลจะถูกคัดลอกไปยังอินสแตนซ์นี้ กิจกรรมที่มีอยู่จะไม่ได้รับการอัปเดต
 
 ## Rest API:
 
