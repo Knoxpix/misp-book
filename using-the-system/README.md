@@ -79,11 +79,11 @@ Sharing groups consist of the following elements, each of which has its own page
 
 ![The general tab of the sharing group tool](figures/sgpage1.png)
 
-*  **General:** Metadata describing the intent of the sharing group
-  *  **Name:** The unique name of the sharing group.
-  *  **Releasable to:** A human-readable description of who data marked with the sharing group is shareable with. This field is NOT used by MISP for anything besides for being an informational field aimed at extender organisations of the sharing group.
-  *  **Description:** A natural-text representation of the intent of the sharing group.
-  *  **Make the sharing group selectable (active):** A sharing group can be made passive by unchecking this setting. All events and attributes will continue to adhere to a passive sharing group's distribution setting, however, the sharing group will not be offered as a selectable option when setting the distribution of events/attributes. The idea behind this is that ad-hoc sharing groups that have outlived their purpose can be retired in order to reduce the clutter in the UI.
+*  **General:** ข้อมูลเมตาที่อธิบายถึงเจตนาของกลุ่มการแชร์
+  *  **Name:** ชื่อเฉพาะของกลุ่มการแชร์.
+  *  **Releasable to:** คำอธิบายที่มนุษย์สามารถอ่านได้เกี่ยวกับข้อมูลที่ทำเครื่องหมายด้วยกลุ่มการแบ่งปันสามารถใช้ร่วมกันได้ ฟิลด์นี้จะไม่ถูกใช้โดย MISP สำหรับสิ่งอื่นใดนอกเหนือจากการเป็นช่องข้อมูลที่มุ่งขยายองค์กรของกลุ่มการแชร์.
+  *  **Description:** การแสดงข้อความเจตนาของกลุ่มการแชร์.
+  *  **Make the sharing group selectable (active):** กลุ่มการแชร์สามารถทำ passive ได้โดยยกเลิกการเลือกการตั้งค่านี้ เหตุการณ์และแอ็ตทริบิวต์ทั้งหมดจะยังคงเป็นไปตามการตั้งค่าการแจกจ่ายของกลุ่มการแชร์แบบพาสเวิร์ดอย่างไรก็ตามกลุ่มการแชร์จะไม่ถูกเสนอเป็นตัวเลือกที่สามารถเลือกได้เมื่อตั้งค่าการกระจายเหตุการณ์ / แอตทริบิวต์ แนวคิดที่อยู่เบื้องหลังนี้ก็คือกลุ่มการแชร์แบบเฉพาะกิจที่ใช้งานได้นานกว่าเป้าหมายสามารถเกษียณอายุได้เพื่อลดความยุ่งเหยิงใน UI.
 
 ![The organisations tab of the sharing group tool](figures/sgpage2.png)
 
