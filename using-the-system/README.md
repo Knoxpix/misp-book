@@ -87,81 +87,79 @@ Sharing groups consist of the following elements, each of which has its own page
 
 ![The organisations tab of the sharing group tool](figures/sgpage2.png)
 
-*  **Organisations:** The second page of the tool contains the distribution list containing all organisations directly named as a member of the sharing group
-  *  **Add Local/remote organisations:** The organisations are split into two lists (shown as two tabs in the tool) for local and known remote/external organisations. Local organisations are expected to have at least one local user on the instance whilst remote organisations do not. Synchronising with remote instances will create remote organisations whenever a new event is received of a yet unknown organisation. Remote organisations can always be converted to local organisations - this becomes interesting if a user of an external organisation requests access to your MISP instance.
-  *  **Extend checkmark:** Checking the extend checkmark makes the selected organisation an extender of the sharing group, meaning they can edit the sharing group. It is expected of these trusted partners that they adhere to the "releasable to" tag set on the general page. The organisation creating the sharing group is always included as an extender.
+*  **Organisations:** เพจที่สองของเครื่องมือประกอบด้วยรายชื่อการแจกจ่ายที่มีองค์กรทั้งหมดที่ตั้งชื่อโดยตรงในฐานะสมาชิกของกลุ่มการแชร์
+  *  **Add Local/remote organisations:** องค์กรแบ่งออกเป็นสองรายการ (แสดงเป็นแท็บสองแท็บในเครื่องมือ) สำหรับองค์กรภายนอกและภายนอกที่เป็นที่รู้จักและท้องถิ่น องค์กรท้องถิ่นคาดว่าจะมีผู้ใช้แบบโลคัลอย่างน้อยหนึ่งรายในอินสแตนซ์ในขณะที่องค์กรที่ห่างไกลไม่ทำเช่นนั้น การซิงค์กับอินสแตนซ์จากระยะไกลจะสร้างองค์กรระยะไกลเมื่อใดก็ตามที่มีการรับเหตุการณ์ใหม่ ๆ ขององค์กรที่ไม่รู้จัก องค์กรที่ห่างไกลสามารถถูกแปลงเป็นองค์กรในท้องถิ่นได้ทุกเมื่อ - สิ่งนี้จะกลายเป็นเรื่องที่น่าสนใจหากผู้ใช้องค์กรภายนอกร้องขอให้เข้าถึงอินสแตนซ์ MISP ของคุณ.
+  *  **Extend checkmark:** การตรวจสอบเครื่องหมายถูกต่อขยายทำให้องค์กรที่เลือกเป็นส่วนขยายของกลุ่มการแชร์ซึ่งหมายความว่าพวกเขาสามารถแก้ไขกลุ่มการแชร์ได้ คาดว่าพันธมิตรที่เชื่อถือได้เหล่านี้จะปฏิบัติตามแท็ก "releasable to" ในหน้าทั่วไป องค์กรที่สร้างกลุ่มการแชร์จะรวมอยู่ใน Extender เสมอ.
 
 ![The servers tab of the sharing group tool](figures/sgpage3.png)
 
-*  **Servers:** The third page of the tool describes the MISP instances the data marked with the given sharing group are allowed to be synchronised with. Keep in mind that any user that can view an event on a given instance will have the right to pull the event to their home instance, as they are part of the sharing group, however the organisation distribution list will still apply.
-  *  **Enable roaming mode:** This setting will disable the server list and rely purely ont he organisation list to distribute the data. If a sync connection's host organisation is in the organisation distribution list the instance becomes eligible for synchronising the data marked with the sharing group. Generally this carries a slightly higher risk as it relies on administrators correctly setting up the host organisation settings, but it removes the need to know the specific instance urls where the event/attribute should flow.
-  *  **Add instance:** Add an instance to the distribution list from the sync instances set up under sync actions -> servers
-  *  **All orgs:** Checking this checkmark will automatically include all organisations on the given instance in the sharing group. This means that in order to exchange with all users of a linked community, one does not need to know every organisation residing on the instance. This also means that the distribution list will not include the organisation names, which can be interesting for certain privacy sensitive communities.
+*  **Servers:** หน้าเว็บที่สามของเครื่องมืออธิบายถึงอินสแตนซ์ของ MISP ข้อมูลที่ทำเครื่องหมายด้วยกลุ่มการแชร์จะให้สามารถทำข้อมูลให้ตรงกันได้ โปรดจำไว้ว่าผู้ใช้ที่สามารถดูกิจกรรมในอินสแตนซ์ที่กำหนดจะมีสิทธิ์ดึงเหตุการณ์ไปยังอินสแตนซ์ที่บ้านเนื่องจากเป็นส่วนหนึ่งของกลุ่มการแชร์อย่างไรก็ตามรายชื่อการแจกจ่ายขององค์กรจะยังคงใช้อยู่.
+  *  **Enable roaming mode:** การตั้งค่านี้จะปิดการใช้งานรายชื่อเซิร์ฟเวอร์และพึ่งพาได้อย่างหมดจดในรายชื่อองค์กรเพื่อแจกจ่ายข้อมูล ถ้าองค์กรโฮสต์ของการเชื่อมต่อข้อมูลซิงค์อยู่ในรายชื่อการแจกจ่ายขององค์กรอินสแตนซ์จะมีสิทธิ์ในการซิงโครไนซ์ข้อมูลที่ทำเครื่องหมายไว้กับกลุ่มการแชร์ โดยทั่วไปการดำเนินการนี้มีความเสี่ยงสูงกว่าเล็กน้อยเนื่องจากอาศัยผู้ดูแลระบบอย่างถูกต้องในการตั้งค่าการโฮสต์องค์กร แต่จำเป็นต้องทราบว่า URL อินสแตนซ์เฉพาะที่เหตุการณ์ / แอตทริบิวต์ควรไหลออก.
+  *  **Add instance:** เพิ่มอินสแตนซ์ลงในรายการแจกจ่ายจากอินสแตนซ์ซิงค์ที่ตั้งค่าไว้ภายใต้ sync actions -> servers
+  *  **All orgs:** การเลือกเครื่องหมายถูกนี้จะรวมองค์กรทั้งหมดในอินสแตนซ์ที่กำหนดไว้ในกลุ่มการแชร์ ซึ่งหมายความว่าเพื่อแลกเปลี่ยนกับผู้ใช้ทั้งหมดของชุมชนที่เชื่อมโยงกันไม่จำเป็นต้องรู้ว่าทุกๆองค์กรที่อาศัยอยู่ในอินสแตนซ์นั้น นอกจากนี้ยังหมายความว่ารายการแจกจ่ายจะไม่รวมชื่อองค์กรซึ่งน่าสนใจสำหรับชุมชนที่มีความเป็นส่วนตัวบางแห่ง.
 
 ![The summary tab of the sharing group tool](figures/sgpage4.png)
 
-*  **Summary:** Once everything is set up, MISP will summarise the sharing group in a highlighted text page, which is highly advised to be reviewed before submiting the new sharing group/editing the sharing group. Mistakes in the sharing group settings can lead to organisations that should not be involved in the sharing group getting access or organisations receiving unwanted editing rights to the sharing group. Keep in mind that even if you have submitted a sharing group, it is not propagated until an event/attribute receives the sharing group as the selected distribution.
+*  **Summary:** เมื่อตั้งค่าเสร็จแล้ว MISP จะสรุปกลุ่มแบ่งปันในหน้าข้อความที่ไฮไลต์ซึ่งควรจะตรวจทานก่อนที่จะส่งกลุ่มการแชร์ / แก้ไขกลุ่มการแชร์ใหม่ ข้อผิดพลาดในการตั้งค่ากลุ่มการแชร์อาจนำไปสู่องค์กรที่ไม่ควรมีส่วนร่วมในกลุ่มการแชร์ที่ได้รับสิทธิ์การเข้าถึงหรือองค์กรที่ได้รับสิทธิ์การแก้ไขที่ไม่ต้องการให้กับกลุ่มการแชร์ โปรดจำไว้ว่าแม้ว่าคุณจะส่งกลุ่มการแชร์ไปแล้วก็ตามจะไม่มีการเผยแพร่จนกว่าเหตุการณ์ / แอตทริบิวต์จะได้รับกลุ่มการแชร์เป็นกลุ่มการแจกจ่ายที่เลือก.
 
-### Populate from Template
+### เติมจากแม่แบบ
 
-Templates allow users to rapidly populate events of a specific type by filling out a series of pre-defined fields. Users with template creation privileges can create new templates for their organisations or for all organisations on their instance. If you are interested in template creation, please refer to the templating section.
-For users trying to populate an event, after clicking on the populate from template button, you'll be presented with a list of all currently accessible templates. Pick the one that best describes the event that you are creating.
+เทมเพลตช่วยให้ผู้ใช้สามารถสร้างงานประเภทต่างๆได้อย่างรวดเร็วโดยกรอกข้อมูลในฟิลด์ที่กำหนดไว้ล่วงหน้า ผู้ใช้ที่มีสิทธิ์ในการสร้างเทมเพลตสามารถสร้างเทมเพลตใหม่สำหรับองค์กรของตนหรือสำหรับทุกองค์กรในอินสแตนซ์ของตนได้ หากคุณสนใจในการสร้างเทมเพลตโปรดดูหัวข้อ templating
+สำหรับผู้ใช้ที่พยายามเติมเหตุการณ์หลังจากคลิกปุ่มเติมจากเทมเพลตคุณจะเห็นรายการเทมเพลตที่เข้าถึงได้ทั้งหมดในขณะนี้ เลือกรายการที่อธิบายเหตุการณ์ที่คุณกำลังสร้างได้ดีที่สุด
 
 ![Choose the most appropriate template for your event.](figures/template_choice.png)
 
-Once you have chosen a template, you'll be presented with the actual form contained within. Make sure you fill out as many fields as possible with the mandatory fields - marked by a star in a bracket such as this: (*) - are filled out.
-Templates are devided into sections, with each section having a title and a description in addition to a series of fields. Each field can be an attribute or a file attachment field. An attribute field has the following components:
-
+เมื่อคุณเลือกเทมเพลตแล้วคุณจะได้รับแบบฟอร์มที่แท้จริงภายใน ตรวจสอบให้แน่ใจว่าคุณกรอกข้อมูลลงในฟิลด์ที่จำเป็นโดยกรอกข้อมูลลงในช่องที่มีเครื่องหมายดาวไว้ในวงเล็บเช่น: (*) - กรอกข้อมูลครบถ้วน
+เทมเพลตจะแบ่งออกเป็นส่วน ๆ โดยแต่ละส่วนมีชื่อและคำอธิบายนอกเหนือไปจากชุดของฟิลด์ต่างๆ แต่ละฟิลด์สามารถเป็นฟิลด์แอตทริบิวต์หรือไฟล์แนบ เขตข้อมูลแอตทริบิวต์มีคอมโพเนนต์ต่อไปนี้:
 ![MISP will generate attributes based on the field's settings and the data that you provide.](figures/template_field.png)
 
-*  **Field**: The name of the field along with an indication if the field is mandatory.
-*  **Description**: A short description of the field.
-*  **Types**: The value(s) that are valid for the field. In the case of several types being shown here, you can enter value(s) matching any one of the types, or in the case of a batch import field, any mixture of the given types.
-*  **Text field**: This field can either be a single line textfield or a multi-line text area. For the former, enter a single value of the above indicated type, whilst for the latter you cna paste a list of values separated by line-breaks.
+*  **Field**: ชื่อของฟิลด์พร้อมกับตัวบ่งชี้ว่าเขตข้อมูลนี้มีผลบังคับใช้หรือไม่.
+*  **Description**: คำอธิบายสั้น ๆ ขอฟิลลด์.
+*  **Types**: ค่าที่ถูกต้องสำหรับฟิลด์ ในกรณีที่มีหลายประเภทที่แสดงในที่นี้คุณสามารถป้อนค่าที่ตรงกับประเภทใดประเภทหนึ่งหรือในกรณีของฟิลด์การนำเข้าชุดงานผสมชนิดใดก็ตามที่กำหนด.
+*  **Text field**: ฟิลด์นี้สามารถเป็นช่องข้อความบรรทัดเดียวหรือพื้นที่ข้อความหลายบรรทัด สำหรับอดีตป้อนค่าเดียวของประเภทที่ระบุไว้ข้างต้นในขณะที่สำหรับหลังคุณ cna วางรายการค่าที่คั่นด้วยเส้นแบ่ง.
 
 ### Freetext Import Tool
 
 ![Just paste a line-break separated list of indicators into the freetext import tool.](figures/freetext1.png)
 
-If you have a list of indicators that you would like to quickly generate attributes out of then the Free-text import tool is just what you need. Simply paste a list of indicators (separated by line-breaks into this tool).
+หากคุณมีรายการตัวบ่งชี้ที่คุณต้องการสร้างแอตทริบิวต์ได้อย่างรวดเร็วจากนั้นเครื่องมือนำเข้าข้อความฟรีคือสิ่งที่คุณต้องการเท่านั้น เพียงแค่วางรายการของตัวบ่งชี้ (คั่นด้วยเส้นแบ่งเป็นเครื่องมือนี้)
 
 ![MISP will often find several valid category/type combinations for the values. Do last minute adjustments on the result page.](figures/freetext2.png)
 
-Since there are several category / type combinations that can be valid for a lot of values, MISP will suggest the most common settings. You can alter the category / type / IDS fields manually if you disagree with the results. The options will be restricted to valid category/type combinations for the value that you have entered.
+เนื่องจากมีการผสมผสานระหว่างประเภท / ประเภทต่างๆที่ใช้ได้สำหรับค่ามาก MISP จะแนะนำการตั้งค่าที่พบมากที่สุด คุณสามารถเปลี่ยนประเภท / ประเภท / IDS ด้วยตนเองถ้าคุณไม่เห็นด้วยกับผลลัพธ์ ตัวเลือกจะถูก จำกัด ไว้สำหรับการรวมหมวดหมู่ / ประเภทที่ถูกต้องสำหรับค่าที่คุณป้อนไว้
 
-If any correlation is already found, these correlations will be displayed in the result page.
+หากพบความสัมพันธ์ใด ๆ แล้วความสัมพันธ์เหล่านี้จะปรากฏในหน้าผลการค้นหา
 
 ### Attribute Replace Tool
 
-If you would like to create and maintain an event with a set of indicators that receives removals and additions over time, then the attribute replace tool might make this task easier for you.
+หากคุณต้องการสร้างและรักษากิจกรรมด้วยชุดตัวบ่งชี้ที่ได้รับการนำออกและเพิ่มเวลาผ่านไปเครื่องมือแทนที่แอตทริบิวต์อาจทำให้งานนี้ง่ายขึ้นสำหรับคุณ
 
 ![Select a category/type combination and paste the updated list of indicators into the textarea.](figures/attribute_replace_tool.png)
 
-Simply select the desired category / type combination, choose whether the attributes should be marked for IDS exports and paste the new list of indicators into the textarea. Attributes of the same category/type that are present in the event but not the new list will be removed, values in the pasted list that do not yet exist as attributes will be created as attributes and values that already have matching attributes will be left untouched.
+เพียงเลือกประเภท / ประเภทที่ต้องการให้เลือกว่าควรทำเครื่องหมายแอตทริบิวต์สำหรับการส่งออก IDS และวางรายการดัชนีใหม่ลงในพื้นที่ทำงาน แอตทริบิวต์ของหมวดหมู่ / ประเภทเดียวกันที่มีอยู่ในเหตุการณ์ แต่ไม่ใช่รายการใหม่จะถูกนำออกค่าในรายการวางที่ยังไม่มีอยู่เนื่องจากแอตทริบิวต์จะถูกสร้างขึ้นเนื่องจากแอตทริบิวต์และค่าที่มีแอตทริบิวต์ที่ตรงกันจะไม่มีการแตะต้อง .
 
 ### Add attachments to the event:
 
-You can also upload attachments, such as the malware itself, report files from external analysis or simply artifacts dropped by the malware. Clicking on the add attachment button brings up a form that allows you to quickly attach a file to the event. The following fields need to be filled out:
-
+นอกจากนี้คุณยังสามารถอัปโหลดไฟล์แนบเช่นมัลแวร์เองรายงานไฟล์จากการวิเคราะห์ภายนอกหรือสิ่งประดิษฐ์ที่ลดลงจากมัลแวร์ การคลิกที่ปุ่มเพิ่มสิ่งที่แนบมาจะแสดงฟอร์มที่ช่วยให้คุณสามารถแนบไฟล์กับกิจกรรมได้อย่างรวดเร็ว ต้องกรอกข้อมูลต่อไปนี้:
 ![Point the uploader to the file you want to upload. Make sure to mark it as malware if the uploaded file is harmful, that way it will be neutralised.](figures/add_attachment.png)
 
-*   **Category:** The category is the same as with the attributes, it answers the question of what the uploaded file is meant to describe.
-*   **Distribution:** This drop-down list allows you to control who will be able to see this attachment. The distribution is inherited by attributes: the most restrictive setting wins. For more info, refer to the distribution information in the [event section](#creating-an-event).
-*   **Upload field:** By hitting browse, you can browse your file system and point the uploader to the file that you want to attach to the attribute. This will then be uploaded when the upload button is pushed.
-*   **Malware:** This check-box marks the file as malware and as such it will be zipped and passworded, to protect the users of the system from accidentally downloading and executing the file. Make sure to tick this if you suspect that the filed is infected, before uploading it.
-*   **Contextual Comment:** You can add some comments to the attribute that will not be used for correlation but instead serves as purely an informational field.
+*   **Category:** ประเภทเดียวกันกับคุณลักษณะจะตอบคำถามเกี่ยวกับไฟล์ที่อัปโหลดมีขึ้นเพื่ออธิบาย.
+*   **Distribution:**  รายการแบบหล่นลงนี้ช่วยให้คุณสามารถควบคุมว่าใครจะสามารถดูเอกสารแนบนี้ การแจกแจงจะสืบทอดโดยแอตทริบิวต์: การตั้งค่าที่เข้มงวดมากที่สุดจะชนะ สำหรับข้อมูลเพิ่มเติมโปรดดูข้อมูลการแจกจ่ายในส่วน [event section](#creating-an-event).
+*   **Upload field:** โดยการกดปุ่มเรียกดูคุณสามารถเรียกดูระบบไฟล์ของคุณและชี้ผู้อัปโหลดไปยังไฟล์ที่คุณต้องการแนบไปกับแอ็ตทริบิวต์ จากนั้นจะอัปโหลดเมื่อกดปุ่มอัปโหลด.
+*   **Malware:** กล่องกาเครื่องหมายนี้จะทำเครื่องหมายไฟล์เป็นมัลแวร์และจะถูกบีบอัดและรหัสผ่านเพื่อป้องกันผู้ใช้ระบบไม่ให้ดาวน์โหลดและรันไฟล์ อย่าลืมทำเครื่องหมายที่นี่หากคุณสงสัยว่ามีการติดไวรัสก่อนที่จะอัปโหลด.
+*   **Contextual Comment:** คุณสามารถเพิ่มความคิดเห็นบางส่วนไปยังแอตทริบิวต์ที่จะไม่ใช้สำหรับความสัมพันธ์ แต่แทนที่จะทำหน้าที่เป็นข้อมูล.
 
-### Propose a change to an event that belongs to another organisation
+### เสนอการเปลี่ยนแปลงกิจกรรมที่เป็นขององค์กรอื่น
 
-If you would like to propose a modification to an attribute, or to propose some additional attributes to the creating organisation, you can do this with the buttons that replace the add attribute field on the left and the edit icon on the right end of each listed attribute in the event view. The creating organisation of the event will be able to see any proposals and discard or accept the changes.
+หากคุณต้องการเสนอการแก้ไขแอตทริบิวต์หรือเสนอคุณลักษณะเพิ่มเติมให้กับองค์กรที่สร้างขึ้นคุณสามารถทำได้โดยใช้ปุ่มที่ใช้แทนฟิลด์ add attribute ด้านซ้ายและไอคอนแก้ไขที่ด้านขวาของแต่ละรายการ ในมุมมองเหตุการณ์ องค์กรที่สร้างขึ้นของกิจกรรมจะสามารถเห็นข้อเสนอใด ๆ และยกเลิกหรือยอมรับการเปลี่ยนแปลงได้
 
 ![An attribute with a proposal attached will turn blue and the proposal itself will be grey. If there is a grey proposal without a blue attribute infront of it, it means that someone has proposed a new attribute](figures/proposal.png)
 
-If the organisation that has created the event is on another connected server, they will be able to accept the proposal once they initiate a pull and receive your proposal. After this they can republish the event, sending the altered attribute back to your instance.
+หากองค์กรที่สร้างกิจกรรมอยู่ในเซิร์ฟเวอร์ที่เชื่อมต่ออีกรายหนึ่งพวกเขาจะสามารถยอมรับข้อเสนอได้เมื่อเริ่มต้นดึงและรับข้อเสนอของคุณ หลังจากนี้พวกเขาสามารถเผยแพร่เหตุการณ์ใหม่ได้โดยส่งแอตทริบิวต์ที่เปลี่ยนแปลงไปกลับไปที่อินสแตนซ์ของคุณ
 
-### Populate from OpenIOC
+### เติมจาก OpenIOC
 
-It is also possible to attempt to import the data contained in a .ioc file, The import tool will attempt to gather as many IndicatorItems within nested logical operators as possible without breaking their validity. After the procedure is done, you'll be presented with a list of successfully created attributes and a list of failed IndicatorItems as well as a graph of the .ioc file.
+นอกจากนี้ยังสามารถพยายามนำเข้าข้อมูลที่มีอยู่ในไฟล์. ioc เครื่องมือนำเข้าจะพยายามรวบรวม IndicatorItems จำนวนมากไว้ในตัวดำเนินการเชิงตรรกะซ้อนกันมากที่สุดโดยไม่ทำลายความถูกต้อง หลังจากขั้นตอนเสร็จสิ้นแล้วคุณจะเห็นรายการของแอ็ตทริบิวต์ที่สร้างเสร็จแล้วและรายการ IndicatorItems ที่ล้มเหลวรวมทั้งกราฟของไฟล์. ioc
 
 ![The import tool will list the successful and failed entries after the process is done.](figures/ioc1.png)
 
@@ -169,64 +167,64 @@ It is also possible to attempt to import the data contained in a .ioc file, The 
 
 ### Populate from ThreatConnect
 
-You can also import the data from a ThreatConnect export csv file. The following columns are used by the import tool (and are thus mandatory fields to select during the export):
+นอกจากนี้คุณยังสามารถนำเข้าข้อมูลจากไฟล์ csv ที่ส่งออก ThreatConnect คอลัมน์ต่อไปนี้ใช้โดยเครื่องมือการนำเข้า (จึงเป็นฟิลด์บังคับเพื่อเลือกในระหว่างการส่งออก):
 *   Type
 *   Value
 *   Confidence
 *   Description
 *   Source
 
-The result will be a list of attributes that get added to the currently selected event, each of which will be marked with a comment that indicates that its origin being from a ThreatConnect import.
+ผลลัพธ์จะเป็นรายการแอตทริบิวต์ที่เพิ่มลงในเหตุการณ์ที่เลือกในปัจจุบันแต่ละรายการจะถูกทำเครื่องหมายด้วยความคิดเห็นที่ระบุว่าแหล่งที่มานั้นมาจากการนำเข้า ThreatConnect
 
 ### Adding IOCs from a PDF report
 
-You can You can use a generic script called [IOC parser](https://github.com/armbues/ioc_parser) or use a script published by Palo Alto to convert IOC parser output to a MISP event: [report_to_misp] (https://github.com/PaloAltoNetworks-BD/report_to_misp/).
+คุณสามารถใช้สคริปต์ทั่วไปที่เรียกว่า [IOC parser](https://github.com/armbues/ioc_parser) หรือใช้สคริปต์ที่เผยแพร่โดย Palo Alto เพื่อแปลง IAR parser output ไปเป็นเหตุการณ์ MISP: [report_to_misp] (https://github.com/PaloAltoNetworks-BD/report_to_misp/).
 
 ### Publish an event:
 
 ![Only use publish (no email) for minor changes such as the correction of typos.](figures/publish.png)
 
-Once all the attributes and attachments that you want to include with the event are uploaded / set, it is time to finalise its creation by publishing the event (click on publish event in the event view). This will alert the eligible users of it (based on the private-controls of the event and its attributes/attachments and whether they have auto-alert turned on), push the event to instances that your instance connects to and propagate it further based on the distribution rules. It also readies the network related attributes for NIDS signature creation (through the NIDS signature export feature, for more information, go to the export section.).
-There is an alternate way of publishing an event without alerting any other users, by using the "publish (no email)" button. This should only be used for minor edits (such as correcting a typo).
+เมื่อมีการอัปโหลด / ตั้งค่าแอตทริบิวต์และสิ่งที่แนบทั้งหมดที่คุณต้องการรวมไว้ในกิจกรรมแล้วให้สิ้นสุดการสร้างโดยเผยแพร่กิจกรรม (คลิกเหตุการณ์ที่เผยแพร่ในมุมมองเหตุการณ์) การแจ้งเตือนจะแจ้งเตือนผู้ใช้ที่มีสิทธิ์ (ขึ้นอยู่กับการควบคุมส่วนตัวของเหตุการณ์และแอตทริบิวต์ / สิ่งที่แนบและไม่ว่าจะมีการเปิดใช้งานการแจ้งเตือนอัตโนมัติ) หรือไม่ให้ผลักดันเหตุการณ์ดังกล่าวไปยังอินสแตนซ์ที่อินสแตนซ์ของคุณเชื่อมต่อและเผยแพร่ต่อไป กฎการแจกจ่าย นอกจากนี้ยังอ่านแอตทริบิวต์ที่เกี่ยวกับเครือข่ายสำหรับการสร้างลายเซ็น NIDS ด้วย (ผ่านคุณลักษณะการส่งออกลายเซ็น NIDS สำหรับข้อมูลเพิ่มเติมไปที่ส่วนการส่งออก)
+มีทางเลือกอื่นในการเผยแพร่กิจกรรมโดยไม่ต้องแจ้งเตือนผู้ใช้คนอื่น ๆ โดยใช้ปุ่ม "เผยแพร่ (ไม่มีอีเมล)" ควรใช้เฉพาะสำหรับการแก้ไขเล็กน้อย (เช่นการแก้ไขการสะกดผิด)
 
-If your instance has background jobs enabled then the event might not get published immediately.
+หากอินสแตนซ์ของคุณเปิดใช้งานงานแบ็กกราวด์แล้วเหตุการณ์อาจไม่ได้รับการเผยแพร่ทันที
 
 ## Browsing past events:
 
-The MISP interface allows the user to have an overview over or to search for events and attributes of events that are already stored in the system in various ways.
+อินเทอร์เฟซ MISP ช่วยให้ผู้ใช้มีภาพรวมหรือค้นหาเหตุการณ์และแอตทริบิวต์ของเหตุการณ์ที่เก็บอยู่ในระบบได้หลายวิธี
 ### To list all events:
 
-On the left menu bar, the option "List events" will generate a list of the last 60 events. While the attributes themselves aren't shown in this view, the following pieces of information can be seen:
+บนแถบเมนูด้านซ้ายตัวเลือก "List events" จะสร้างรายการของ 60 เหตุการณ์ล่าสุด ในขณะที่แอตทริบิวต์ตัวเองไม่ปรากฏในมุมมองนี้คุณสามารถดูข้อมูลต่อไปนี้ได้:
 
 ![This is the list of events in the system. Use the buttons to the right to alter or view any of the events.](figures/list_events2.png)
-*   **Published:** Already published events are marked by a checkmark. Unpublished events are marked by a cross.
-*   **Org:** The organisation that created the event.
-*   **Owner Org:** The organisation that owns the event on this instance. This field is only visible to administrators.
-*   **ID:** The event's ID number, assigned by the system when the event was first entered (or in the case of an event that was synchronized, when it was first copied over - more on synchronisation in chapter xy)
-*   **Tags:** Tags that are assigned to this event.
-*   **#Attr.:** The number of attributes that the event has.
-*   **Email:** The e-mail address of the event's reporter. This is not visible to regular users. Organisation administrators can see the e-mail addresses of their own organisation's users.
-*   **Date:** The date of the attack.
-*   **Threat Level:** The risk level of the attack, the following levels are possible:
-  *    **Low:** General Malware
-  *    **Medium:** Advanced Persistent Threats (APTs)
-  *    **High:** Sophisticated APTs and 0day exploits
-  *    **Undefined:** This field can be left undefined and edited at a later date.
-*   **Analysis:** Indicates the current stage of the analysis for the event, with the following possible options:
-  *   **Initial:** The analysis is just beginning
-  *   **Ongoing:** The analysis is in progress
-  *   **Completed:** The analysis is complete
-*   **Info:** A short description of the event, starting with an internal reference number.
-*   **Distribution:** This field indicates what the sharing privileges of the event. For details, refer to the distribution information in the [event section](#creating-an-event).
-*   **Actions:** The controls that the user has to view or modify the event. The possible actions that are available (depending on user privileges - [click here](#roles) to find out more about privileges):
+*   **Published:** กิจกรรมที่เผยแพร่แล้วจะถูกทำเครื่องหมายด้วยเครื่องหมายถูก กิจกรรมที่ไม่ได้เผยแพร่ถูกทำเครื่องหมายด้วยเครื่องหมายกากบาท
+*   **Org:** องค์กรที่สร้างกิจกรรม
+*   **Owner Org:** องค์กรที่เป็นเจ้าของเหตุการณ์ในกรณีนี้ ฟิลด์นี้จะปรากฏแก่ผู้ดูแลเท่านั้น
+*   **ID:** หมายเลขประจำตัวของเหตุการณ์ที่กำหนดโดยระบบเมื่อเหตุการณ์ถูกป้อนครั้งแรก (หรือในกรณีของเหตุการณ์ที่ถูกซิงโครไนซ์เมื่อมันถูกคัดลอกครั้งแรกมากกว่า - เพิ่มเติมเกี่ยวกับการทำข้อมูลให้ตรงกันในบทที่ xy)
+*   **Tags:** แท็กที่กำหนดให้กับกิจกรรมนี้
+*   **#Attr.:** จำนวนแอตทริบิวต์ที่เหตุการณ์มี
+*   **Email:** ที่อยู่อีเมลของผู้สื่อข่าวของกิจกรรม ไม่ปรากฏแก่ผู้ใช้ทั่วไป ผู้ดูแลระบบองค์กรสามารถดูที่อยู่อีเมลของผู้ใช้องค์กรของตนเองได้
+*   **Date:** วันที่ของการโจมตี
+*   **Threat Level:** ระดับความเสี่ยงของการโจมตีระดับต่อไปนี้เป็นไปได้:
+  *    **Low:** มัลแวร์ทั่วไป
+  *    **Medium:** ภัยคุกคามแบบถาวรขั้นสูง (APTs)
+  *    **High:** APTs ที่ซับซ้อนและการโจมตีแบบ 0day
+  *    **Undefined:** ฟิลด์นี้จะไม่สามารถกำหนดและแก้ไขได้ในภายหลัง
+*   **Analysis:** แสดงถึงขั้นตอนปัจจุบันของการวิเคราะห์สำหรับเหตุการณ์โดยมีตัวเลือกที่เป็นไปได้ดังต่อไปนี้:
+  *   **Initial:** การวิเคราะห์เพิ่งเริ่มต้น	
+  *   **Ongoing:** การวิเคราะห์กำลังดำเนินการอยู่
+  *   **Completed:** การวิเคราะห์เสร็จสมบูรณ์
+*   **Info:** คำอธิบายสั้น ๆ ของกิจกรรมโดยเริ่มจากหมายเลขอ้างอิงภายใน
+*   **Distribution:** ฟิลด์นี้ระบุถึงสิทธิพิเศษในการแบ่งปันของกิจกรรม สำหรับรายละเอียดโปรดดูข้อมูลการแจกจ่ายในส่วน [event section](#creating-an-event).
+*   **Actions:** การควบคุมที่ผู้ใช้ต้องดูหรือปรับเปลี่ยนเหตุการณ์ การดำเนินการที่เป็นไปได้ที่มีอยู่  (depending on user privileges - [click here](#roles) to find out more about privileges):
   *   **Publish:** Publishing an event will have several effects: The system will e-mail all eligible users that have auto-alert turned on (and having the needed privileges for the event, depending on its private classification) with a description of your newly published event, it will be flagged as published and it will be pushed to all eligible servers (to read more about synchronisation between servers, have a look at the [section on connecting servers](#connecting-to-other-instances)
-  *   **Edit:** Clicking on the edit button will bring up the same same screen as the one used for creating new events, with the exception that all fields come filled out with the data of the event that is being edited. The distribution of an event can only be edited if you are a user of the creating organisation of the event. For more information on this view, refer to the section on [creating an event](#creating-an-event).
-  *   **Delete:** The system will prompt you before erasing the unwanted event.
-  *   **View:** Will bring up the event view, which besides the basic information contained in the event list, will also include the following:
+  *   **Edit:** การคลิกปุ่มแก้ไขจะแสดงหน้าจอเดียวกันกับที่ใช้สำหรับสร้างเหตุการณ์ใหม่ยกเว้นว่าทุกช่องจะกรอกข้อมูลของกิจกรรมที่กำลังแก้ไขอยู่ คุณสามารถแก้ไขการเผยแพร่กิจกรรมได้เฉพาะเมื่อคุณเป็นผู้ใช้งานขององค์กรที่สร้างขึ้นเท่านั้น สำหรับข้อมูลเพิ่มเติมเกี่ยวกับมุมมองนี้โปรดดูที่ส่วน (อ่านเพิ่มเติมเกี่ยวกับการซิงโครไนซ์ระหว่างเซิร์ฟเวอร์ได้ที่ [creating an event](#creating-an-event).
+  *   **Delete:** ระบบจะแจ้งให้คุณทราบก่อนลบกิจกรรมที่ไม่พึงประสงค์.
+  *   **View:** จะนำมุมมองเหตุการณ์ซึ่งนอกเหนือจากข้อมูลพื้นฐานที่มีอยู่ในรายการงานจะมีดังต่อไปนี้::
 
 ### Filters
 
-It is also possible to filter the events shown by clicking on the small magnifying glass icons next to the field names and entering a filter term.
+นอกจากนี้ยังสามารถกรองกิจกรรมที่แสดงโดยการคลิกที่ไอคอนรูปแว่นขยายขนาดเล็กที่อยู่ถัดจากชื่อฟิลด์และป้อนคำที่กรอง
 
 ### Event view
 
