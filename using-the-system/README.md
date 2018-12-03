@@ -7,71 +7,75 @@
 ขั้นตอนการเข้าสร้างเหตุการณ์สามารถแบ่งออกเป็น 3 ขั้นตอนคือการสร้างเหตุการณ์เองโดยการสร้างแอ็ตทริบิวต์
 และสิ่งที่แนบมาและเผยแพร่.
 
-During this first step, you will be create a basic event without any actual attributes, but storing general information such as a description, time and risk level of the incident. To start creating the event, click on the New Event button on the left and fill out the form you are presented with. The following fields need to be filled out:
+ในขั้นตอนแรกนี้คุณจะสร้างกิจกรรมพื้นฐานโดยไม่มีแอตทริบิวต์ที่แท้จริง แต่เก็บข้อมูลทั่วไปเช่นคำอธิบายเวลาและระดับความเสี่ยงของเหตุการณ์ เมื่อต้องการเริ่มสร้างกิจกรรมให้คลิกที่ปุ่มกิจกรรมใหม่ทางด้านซ้ายและกรอกแบบฟอร์มที่คุณนำเสนอ ต้องกรอกข้อมูลต่อไปนี้:
 
 ![Fill this form out to create a skeleton event, before proceeding to populate it with attributes and attachments.](figures/add_event.png)
 
-*   **Date:** The date when the incident has happened. Just click this field and a date-picker will pop up where you can select the desired date.
-*   **Distribution:** This setting controls, who will be able to see this event once it becomes published and eventually when it becomes pulled. Apart from being able to set which users on this server are allowed to see the event, this also controls whether the event will be synchronised to other servers or not. The distribution is inherited by attributes: the most restrictive setting wins. The following options are available:
-  *   **Your organization only:** This setting will only allow members of your organisation to see this. It can be pulled to another instance by one of your organisation members where only your organisation will be able to see it. Events with this setting will not be synchronised.
+*   **Date:** วันที่เหตุการณ์เกิดขึ้น เพียงแค่คลิกฟิลด์นี้และตัวเลือกวันที่จะปรากฏขึ้นซึ่งคุณสามารถเลือกวันที่ที่ต้องการได้.
+*   **Distribution:** การตั้งค่านี้จะควบคุมผู้ที่จะสามารถมองเห็นกิจกรรมนี้ได้เมื่อได้รับการเผยแพร่และในที่สุดเมื่อดึงออก นอกเหนือจากความสามารถในการกำหนดว่าผู้ใช้ใดในเซิร์ฟเวอร์นี้จะได้รับอนุญาตให้ดูกิจกรรมระบบจะควบคุมว่าเหตุการณ์จะถูกซิงโครไนซ์กับเซิร์ฟเวอร์เครื่องอื่นหรือไม่ การแจกแจงจะสืบทอดโดยแอตทริบิวต์: การตั้งค่าที่เข้มงวดมากที่สุดจะชนะ มีตัวเลือกดังต่อไปนี้:
+  *   **Your organization only:** การตั้งค่านี้จะอนุญาตเฉพาะสมาชิกในองค์กรของคุณเท่านั้นที่จะเห็นสิ่งนี้ คุณสามารถดึงสมาชิกอื่นในองค์กรของคุณออกจากองค์กรของคุณได้เฉพาะองค์กรของคุณเท่านั้นที่สามารถดูได้ กิจกรรมที่มีการตั้งค่านี้จะไม่ถูกซิงโครไนซ์.
+      
       Upon push: do not push. Upon pull : pull.
-  *   **This Community-only:** Users that are part of your MISP community will be able to see the event. This includes your own organisation, organisations on this MISP server and organisations running MISP servers that synchronise with this server. Any other organisations connected to such linked servers will be restricted from seeing the event.
+  *   **This Community-only:** ผู้ใช้ที่เป็นส่วนหนึ่งของกลุ่มองค์กร MISP ของคุณจะสามารถดูกิจกรรมได้ ซึ่งรวมถึงองค์กรของคุณองค์กรในเซิร์ฟเวอร์ MISP นี้และองค์กรที่ใช้เซิร์ฟเวอร์ MISP ที่ซิงค์กับเซิร์ฟเวอร์นี้ องค์กรอื่นที่เชื่อมต่อกับเซิร์ฟเวอร์ที่เชื่อมโยงกันเหล่านี้จะถูก จำกัด ไม่ให้เข้าร่วมกิจกรรม.
+  
       Upon push: do not push. Upon pull: pull and downgrade to Your organization only.
-  *   **Connected communities:** Users that are part of your MISP community will be able to see the event. This includes all organisations on this MISP server, all organisations on MISP servers synchronising with this server and the hosting organisations of servers that connect to those afore mentioned servers (so basically any server that is 2 hops away from this one). Any other organisations connected to linked servers that are 2 hops away from this own will be restricted from seeing the event.
+  *   **Connected communities:** ผู้ใช้ที่เป็นส่วนหนึ่งของชุมชน MISP ของคุณจะสามารถดูกิจกรรมได้ ซึ่งรวมถึงองค์กรทั้งหมดในเซิร์ฟเวอร์ MISP นี้องค์กรทั้งหมดบนเซิร์ฟเวอร์ MISP ที่ซิงโครไนซ์กับเซิร์ฟเวอร์นี้และองค์กรโฮสติ้งของเซิร์ฟเวอร์ที่เชื่อมต่อกับเซิร์ฟเวอร์ที่กล่าวถึงข้างต้น (โดยทั่วไปเซิร์ฟเวอร์ใดก็ตามที่อยู่ห่างจากเซิร์ฟเวอร์นี้ 2 ช่วง) องค์กรอื่นที่เชื่อมต่อกับเซิร์ฟเวอร์ที่เชื่อมโยงซึ่งอยู่ห่างจากที่นี่ไป 2 ช่วง จะถูก จำกัด ให้เห็นเหตุการณ์
       Upon push: downgrade to This Community only and push. Upon pull: pull and downgrade to This Community only.
-  *   **All communities:** This will share the event with all MISP communities, allowing the event to be freely propagated from one server to the next.
+  *   **All communities:** ซึ่งจะเป็นการแบ่งปันเหตุการณ์กับชุมชน MISP ทั้งหมดทำให้สามารถเผยแพร่กิจกรรมได้อย่างเสรีจากเซิร์ฟเวอร์เครื่องหนึ่งไปยังอีก.
       Upon push: push. Upon pull: pull.
-  *   **Sharing group:** This will share the event to the defined sharing group. This includes only the organisations defined in the sharing group. The distribution can be local and cross-instance depending of the sharing group definition. For more information on sharing groups, refer to the sharing group section.
-*   **Threat Level:** This field indicates the risk level of the event. Incidents can be categorised into three different threat categories (low, medium, high). This field can alternatively be left as undefined. The 3 options are:
-  *  **Low:** General mass malware.
-  *  **Medium:** Advanced Persistent Threats (APT)
-  *  **High:** Sophisticated APTs and 0day attacks.
-*   **Analysis:** Indicates the current stage of the analysis for the event, with the following possible options:
-  *  **Initial:** The analysis is just beginning
-  *  **Ongoing:** The analysis is in progress
-  *  **Completed:** The analysis is complete
-*   **Event Description:** The info field, where the malware/incident can get a brief description starting with the internal reference. This field should be as brief and concise as possible, the more detailed description happens through attributes in the next stage of the event's creation. Keep in mind that the system will automatically replace detected text strings that match a regular expression entry set up by your server's administrator(s).
-*   **GFI Sandbox:** It is possible to upload the exported .zip file from GFI sandbox with the help of this tool. These will be dissected by the MISP and a list of attributes and attachments will automatically be generated from the .zip file. Whilst this does most of the work needed to be done in the second step of the event's creation, it is important to manually look over all the data that is being entered.
+  *   **Sharing group:** กิจกรรมนี้จะแชร์กิจกรรมกับกลุ่มการแชร์ที่กำหนดไว้ ซึ่งรวมถึงเฉพาะองค์กรที่กำหนดไว้ในกลุ่มการแชร์ การกระจายสามารถเป็นแบบโลคัลและแบบไขว้กันขึ้นอยู่กับนิยามของกลุ่มการแชร์ สำหรับข้อมูลเพิ่มเติมเกี่ยวกับการแชร์กลุ่มโปรดดูที่ส่วนกลุ่มการแชร์.
+*   **Threat Level:** ฟิลด์นี้แสดงถึงระดับความเสี่ยงของเหตุการณ์ เหตุการณ์สามารถแบ่งได้เป็น 3 ประเภทภัยคุกคามที่แตกต่างกัน (ต่ำ, ปานกลาง, สูง) ฟิลด์นี้สามารถเลือกให้เป็นแบบไม่ระบุได้ มี 3 ตัวเลือกดังนี้:
+  *  **Low:** มัลแวร์มวลทั่วไป.
+  *  **Medium:** ภัยคุกคามแบบถาวรขั้นสูง (APT)
+  *  **High:** APTs ที่ซับซ้อนและการโจมตี 0day.
+*   **Analysis:** แสดงถึงขั้นตอนปัจจุบันของการวิเคราะห์สำหรับเหตุการณ์โดยมีตัวเลือกที่เป็นไปได้ดังต่อไปนี้:
+  *  **Initial:** การวิเคราะห์เพิ่งเริ่มต้น
+  *  **Ongoing:** การวิเคราะห์กำลังดำเนินการอยู่
+  *  **Completed:** การวิเคราะห์เสร็จสมบูรณ์
+*   **Event Description:** ช่องข้อมูลซึ่งมัลแวร์ / เหตุการณ์จะได้รับคำอธิบายสั้น ๆ โดยเริ่มจากการอ้างอิงภายใน ฟิลด์นี้ควรสั้นและกระชับมากที่สุดคำอธิบายโดยละเอียดจะเกิดขึ้นจากแอตทริบิวต์ในขั้นตอนต่อไปของการสร้างกิจกรรม โปรดทราบว่าระบบจะแทนที่สตริงข้อความที่ตรวจพบโดยอัตโนมัติซึ่งตรงกับรายการนิพจน์ทั่วไปที่ผู้ดูแลเซิร์ฟเวอร์ของคุณตั้งค่าไว้.
+*   **GFI Sandbox:** สามารถที่จะอัปโหลดไฟล์. zip ที่ส่งออกจาก Sandbox GFI ด้วยความช่วยเหลือของเครื่องมือนี้ เหล่านี้จะถูกจัดการโดย MISP และรายการของแอ็ตทริบิวต์และไฟล์แนบจะถูกสร้างขึ้นโดยอัตโนมัติจากไฟล์. zip ขณะนี้งานส่วนใหญ่ที่จำเป็นต้องทำในขั้นตอนที่สองของการสร้างกิจกรรมเป็นสิ่งสำคัญที่ต้องดูข้อมูลทั้งหมดที่กำลังถูกป้อนด้วยตนเอง.
 
-### Add attributes to the event:
+### เพิ่มแอตทริบิวต์ให้กับเหตุการณ์:
 
-The second step of creating an event is to populate it with attributes and attachments. This can be done by adding them manually or importing the attributes from an external format (OpenIOC, ThreatConnect). To import from an external format or to upload an attachment use the options in the menu on the left.
+ขั้นตอนที่สองของการสร้างกิจกรรมคือการเติมข้อมูลให้มีแอตทริบิวต์และไฟล์แนบ ซึ่งสามารถทำได้โดยการเพิ่มด้วยตนเองหรือนำเข้าคุณลักษณะจากรูปแบบภายนอก (OpenIOC, ThreatConnect) หากต้องการนำเข้าจากรูปแบบภายนอกหรืออัปโหลดไฟล์แนบให้ใช้ตัวเลือกในเมนูด้านซ้าย.
 
 ![Use these tools to populate the event.](figures/attribute_tools.png)
 
-Using the above shown buttons, you can populate an event using various tools that will be explained in the following section. Let's start with the Add Attribute button.
+การใช้ปุ่มที่แสดงไว้ข้างต้นคุณสามารถเติมเหตุการณ์โดยใช้เครื่องมือต่างๆที่จะอธิบายไว้ในส่วนต่อไปนี้ เริ่มต้นด้วยปุ่มเพิ่มแอตทริบิวต์
 
-### Add Attribute
+### เพิ่มแอตทริบิวต์
 
-Keep in mind that the system searches for regular expressions in the value field of all attributes when entered, replacing detected strings within it as set up by the server's administrator (for example to enforce standardised capitalisation in paths for event correlation or to bring exact paths to a standardised format). The following fields need to be filled out:
+โปรดจำไว้ว่าระบบจะค้นหานิพจน์ทั่วไปในช่องค่าของแอตทริบิวต์ทั้งหมดเมื่อป้อนแทนที่สตริงที่ตรวจพบภายในตัวตั้งค่าดังกล่าวโดยผู้ดูแลระบบของเซิร์ฟเวอร์ (ตัวอย่างเช่นเพื่อบังคับใช้อักษรตัวพิมพ์ใหญ่ที่เป็นมาตรฐานในเส้นทางสำหรับความสัมพันธ์ของเหตุการณ์หรือเพื่อให้เส้นทางที่ถูกต้อง รูปแบบมาตรฐาน) ต้องกรอกข้อมูลต่อไปนี้:
 ![This form allows you to add attributes.](figures/add_attribute.png)
 
-*   **Category:** This drop-down menu explains the category of the attribute, meaning what aspect of the malware this attribute is describing. This could mean the persistence mechanisms of the malware or network activity, etc. For a list of valid categories, [click here](../categories-and-types)
-*   **Type:** Whilst categories determine what aspect of an event they are describing, the Type explains by what means that aspect is being described. As an example, the source IP address of an attack, a source e-mail address or a file sent through an attachment can all describe the payload delivery of a malware. These would be the types of attributes with the category of payload deliver. For an explanation of what each of the types looks like together with the valid combinations of categories and types, [click here](../categories-and-types)
-*   **Distribution:** This drop-down list allows you to control who will be able to see this attribute. The distribution is inherited by attributes: the most restrictive setting wins. For more info, read the distribution information in the creating an event section - [click here](#creating-an-event)
-*   **Contextual Comment:** Add a comment to the attribute. This will not be used for correlation.
-*   **Value:** The actual value of the attribute, enter data about the value based on what is valid for the chosen attribute type. For example, for an attribute of type ip-src (source IP address), 11.11.11.11 would be a valid value. For more information on types and values, [click here](../categories-and-types)
-*   **Contextual Comment:** You can add some comments to the attribute that will not be used for correlation but instead serves as purely an informational field.
-*   **For Intrusion Detection System:** This option allows the attribute to be used as an IDS signature when exporting the NIDS data, unless it is being overruled by the white-list. For more information about the whitelist, head over to the [administration](#administration) section.
-*   **Batch import:** If there are several attributes of the same type to enter (such as a list of IP addresses, it is possible to enter them all into the same value-field, separated by a line break between each line. This will allow the system to create separate lines for the each attribute.
+*   **Category:** เมนูแบบเลื่อนลงนี้จะอธิบายหมวดหมู่ของแอตทริบิวต์ซึ่งหมายถึงลักษณะของมัลแวร์ที่อธิบายถึงคุณลักษณะนี้ ซึ่งอาจหมายถึงกลไกการติดตาของมัลแวร์หรือกิจกรรมเครือข่ายเป็นต้นสำหรับรายการประเภทที่ถูกต้อง[click here](../categories-and-types)
+*   **Type:** ขณะที่ประเภทระบุประเภทของเหตุการณ์ที่พวกเขากำลังอธิบายประเภทของคำอธิบายโดยสิ่งที่หมายถึงแง่มุมที่อธิบาย ตัวอย่างเช่นที่อยู่ IP ของแหล่งที่มาของการโจมตีอีเมลแอดเดรสต้นทางหรือไฟล์ที่ส่งผ่านไฟล์แนบสามารถอธิบายถึงการจัดส่งของมัลแวร์ได้ เหล่านี้จะเป็นประเภทของแอตทริบิวต์ที่มีประเภทของการจัดส่งข้อมูล สำหรับคำอธิบายประเภทของแต่ละประเภทและชนิดที่ถูกต้อง, [click here](../categories-and-types)
+*   **Distribution:** รายการแบบเลื่อนลงนี้ช่วยให้คุณสามารถควบคุมว่าใครจะสามารถดูแอตทริบิวต์นี้ การแจกแจงจะสืบทอดโดยแอตทริบิวต์: การตั้งค่าที่เข้มงวดมากที่สุดจะชนะ สำหรับข้อมูลเพิ่มเติมโปรดอ่านข้อมูลการแจกจ่ายในส่วนการสร้างกิจกรรม - [click here](#creating-an-event)
+*   **Contextual Comment:** เพิ่มความคิดเห็นในแอตทริบิวต์ นี้จะไม่ถูกใช้สำหรับความสัมพันธ์.
+*   **Value:** ค่าที่แท้จริงของแอตทริบิวต์ให้ป้อนข้อมูลเกี่ยวกับค่าที่อิงกับสิ่งที่ถูกต้องสำหรับประเภทแอ็ตทริบิวต์ที่เลือก ตัวอย่างเช่นสำหรับแอ็ตทริบิวต์ type ip-src (ที่อยู่ IP ต้นทาง) 11.11.11.11 จะเป็นค่าที่ถูกต้อง สำหรับข้อมูลเพิ่มเติมเกี่ยวกับประเภทและค่า [click here](../categories-and-types)
+*   **Contextual Comment:** คุณสามารถเพิ่มความคิดเห็นบางส่วนไปยังแอตทริบิวต์ที่จะไม่ใช้สำหรับความสัมพันธ์ แต่แทนที่จะทำหน้าที่เป็นข้อมูลที่ให้ข้อมูลอย่างหมดจด
+*   **For Intrusion Detection System:** ตัวเลือกนี้อนุญาตให้ใช้แอ็ตทริบิวต์เป็นลายเซ็น IDS เมื่อส่งออกข้อมูล NIDS เว้นแต่จะถูกครอบงำโดยรายการสีขาว สำหรับข้อมูลเพิ่มเติมเกี่ยวกับรายการที่อนุญาตพิเศษให้ไปที่ส่วน [administration](#administration).
+*   **Batch import:** หากมีแอตทริบิวต์หลายชนิดที่ป้อน (เช่นรายการที่อยู่ IP คุณสามารถป้อนข้อมูลทั้งหมดลงในช่องค่าเดียวกันได้โดยคั่นด้วยเส้นแบ่งระหว่างแต่ละบรรทัด) ซึ่งจะทำให้ระบบสามารถสร้างได้ แยกบรรทัดสำหรับแต่ละแอตทริบิวต์.
 
 
-### Add Object
+### เพิ่มอ็อบเจกต์
 
-Please have a look at the [MISP-objects chapter](../misp-object/README.md)
+กรุณาข้ามไปอ่านที่ [MISP-objects chapter](../misp-object/README.md)
 
 
-### Create and manage Sharing Groups
+### สร้างและจัดการกลุ่มที่ใช้ร่วมกัน
 
-Sharing groups in MISP are a more granular way to create re-usable distribution lists for events/attributes that allow users to include organisations from their own instance (local organisations) as well as organisations from directly, or indirectly connected instances (external organisations). Sharing groups can be created by any user that has the sharing group editor permission. Additionally, sharing groups can be edited by any user that has the aforementioned permission in addition to being a member of the sharing group's creating organisation, or any organisation that is marked as an "extender" of the sharing group. The main use for the extend feature is delegating the rights to add users to trusted partners. For example, when sharing with a different industry sector, knowing all actors that should receive the information is often not possible, so delegating the rights to extend the event to a trusted representative of said sector would allow for someone with more insight to find and add the proper list of partners for the sharing group.
+การแบ่งปันกลุ่มใน MISP เป็นวิธีที่ละเอียดมากขึ้นในการสร้างรายการการแจกจ่ายที่สามารถใช้งานได้ใหม่สำหรับเหตุการณ์ / แอตทริบิวต์ที่อนุญาตให้ผู้ใช้รวมองค์กรจากอินสแตนซ์ของตนเอง (องค์กรท้องถิ่น) รวมทั้งองค์กรจากอินสแตนซ์ที่เชื่อมต่อโดยตรงหรือโดยอ้อม (องค์กรภายนอก) กลุ่มผู้ใช้ที่มีสิทธิ์ในการแก้ไขกลุ่มผู้ใช้ร่วมกันสามารถสร้างกลุ่มที่ใช้ร่วมกันได้ นอกจากนี้การแชร์กลุ่มสามารถแก้ไขได้โดยผู้ใช้ที่มีสิทธิ์ดังกล่าวข้างต้นนอกเหนือจากการเป็นสมาชิกขององค์กรที่สร้างกลุ่มการแชร์หรือองค์กรที่มีการทำเครื่องหมายว่าเป็น "Extender" ของกลุ่มการแชร์ การใช้งานหลักสำหรับคุณลักษณะเพิ่มเติมคือการมอบหมายสิทธิ์ในการเพิ่มผู้ใช้ไปยังคู่ค้าที่เชื่อถือได้ ตัวอย่างเช่นเมื่อแบ่งปันกับภาคอุตสาหกรรมอื่นรู้ว่านักแสดงทั้งหมดที่ควรได้รับข้อมูลมักไม่สามารถทำได้ดังนั้นการมอบสิทธิ์ในการขยายกิจกรรมไปยังตัวแทนที่เชื่อถือได้ของภาคดังกล่าวจะช่วยให้ผู้ที่มีความเข้าใจมากขึ้นในการค้นหาและเพิ่ม รายชื่อคู่ค้าที่เหมาะสมสำหรับกลุ่มการแชร์
 
 ![A sample sharing group setup involving 3 instances and showing the various ways to include/exclude organisations](figures/sync.png)
 
-The most general use-cases for sharing groups are creating re-usable topical subgroups in MISP that share events or for ad-hoc sharing scenarios (such as several organisations involved in a specific incident wanting to work together). Generally sharing groups add a level of complexity for the users involved as well as a performance overhead on the data marked with it.
+กรณีการใช้งานร่วมกันโดยทั่วไปสำหรับกลุ่มการใช้งานร่วมกันกำลังสร้างกลุ่มย่อยเฉพาะหัวข้อที่สามารถใช้ซ้ำได้ใน MISP ซึ่งแบ่งใช้เหตุการณ์หรือสถานการณ์ที่ใช้ร่วมกันแบบเฉพาะกิจ (เช่นหลายองค์กรที่เกี่ยวข้องกับเหตุการณ์เฉพาะที่ต้องการทำงานร่วมกัน) โดยทั่วไปกลุ่มการแชร์จะเพิ่มระดับของความซับซ้อนสำหรับผู้ใช้ที่เกี่ยวข้องรวมถึงค่าใช้จ่ายที่มีต่อข้อมูลที่ทำเครื่องหมายไว้ด้วย
 
-As a best-practice recommendation, using traditional distribution methods is prefered unless they cannot cover the given use-case. Also, whilst sharing groups can be assigned to both events and attributes, it is highly recommended to use the special "inherit" distribution setting on attributes whenever the attribute's sharing group would match the event's.
+เป็นคำแนะนำที่ดีที่สุดในการปฏิบัติโดยใช้วิธีการแจกจ่ายแบบดั้งเดิมเว้นแต่จะไม่สามารถครอบคลุมกรณีการใช้งานที่ระบุได้ นอกจากนี้ในขณะที่กลุ่มการแชร์สามารถกำหนดให้กับทั้งเหตุการณ์และแอตทริบิวต์ได้ขอแนะนำให้ใช้การตั้งค่าการแจกแจง "สืบทอด" พิเศษในแอตทริบิวต์เมื่อใดก็ตามที่กลุ่มการแชร์ของแอตทริบิวต์จะตรงกับเหตุการณ์
 
 Sharing groups consist of the following elements, each of which has its own page in the sharing group creator/editor tool (accessed via the Global actions -> List Sharing Groups and Add Sharing Group functionalities):
+
+กลุ่มที่ใช้ร่วมกันประกอบด้วยองค์ประกอบต่อไปนี้ซึ่งแต่ละส่วนมีหน้าของตัวเองในเครื่องมือสร้าง / แก้ไขกลุ่มผู้ใช้ร่วมกัน (เข้าถึงได้ผ่านGlobal actions -> List Sharing Groups และ Add Sharing Group)
 
 ![The general tab of the sharing group tool](figures/sgpage1.png)
 
