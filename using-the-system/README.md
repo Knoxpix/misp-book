@@ -1,11 +1,11 @@
 <!-- toc -->
 
-## Using the system
+## การใช้งานระบบ
 
-### Creating an event:
+### การสร้างเหตุการณ์:
 
-The process of entering an event can be split into 3 phases, the creation of the event itself, populating it with attributes
-and attachments and finally publishing it.
+ขั้นตอนการเข้าสร้างเหตุการณ์สามารถแบ่งออกเป็น 3 ขั้นตอนคือการสร้างเหตุการณ์เองโดยการสร้างแอ็ตทริบิวต์
+และสิ่งที่แนบมาและเผยแพร่.
 
 During this first step, you will be create a basic event without any actual attributes, but storing general information such as a description, time and risk level of the incident. To start creating the event, click on the New Event button on the left and fill out the form you are presented with. The following fields need to be filled out:
 

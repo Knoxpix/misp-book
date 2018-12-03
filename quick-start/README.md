@@ -1,129 +1,106 @@
 <!-- This is a comment.
 And Justice for All! -->
 
-# Quick Start
-The Malware Information Sharing Platform (MISP) tool facilitates the exchange of Indicators of Compromise (IOCs) about targeted malware and attacks, within your community of trusted members. MISP is a distributed IOC database containing technical and non-technical information. Exchanging such information should result in faster detection of targeted attacks and improve the detection ratio, whilst also reducing the number of false positives.
-With the focus on automation and standards, MISP provides you with a powerful API via PyMISP, jump ahead to these chapters to get started.
+# เริ่มต้นอย่างรวดเร็ว
 
-## Login into MISP
+เครื่องมือแบ่งปันข้อมูลมัลแวร์ (MISP) ช่วยอำนวยความสะดวกในการแลกเปลี่ยนตัวบ่งชี้การยึดครอง (IOCs) เกี่ยวกับมัลแวร์และการโจมตีเป้าหมายภายเครือข่ายการทำงานของคุณ MISP คือฐานข้อมูล IOC แบบกระจายที่มีข้อมูลทางเทคนิคและข้อมูลที่ไม่ใช่ทางเทคนิค การแลกเปลี่ยนข้อมูลดังกล่าวควรมีผลในการตรวจจับการโจมตีที่กำหนดเป้าหมายได้เร็วขึ้นและปรับปรุงอัตราส่วนการตรวจจับขณะเดียวกันก็ช่วยลดจำนวนความผิดพลาด
+ด้วยการมุ่งเน้นไปที่ระบบอัตโนมัติและมาตรฐาน MISP จะมี API ที่มีประสิทธิภาพผ่านทาง PyMISP ก่อนที่จะเริ่มบทนี้เพื่อเริ่มต้นใช้งาน
 
-MISP default credentials:
-<table>
-<tr>
-  <td>Username:</td>
-  <td>admin@admin.test</td>
-</tr>
-<tr>
-  <td>Password:</td>
-  <td>admin</td>
-</tr>
-</table>
+## Login MISP
 
-## Tasks to do after first Start
-
-1. [Change admin password](https://misp.gitbooks.io/misp-book/content/quick-start/#password-policy)
-2. [Activate Feeds](https://www.circl.lu/doc/misp/managing-feeds/)
-3. [Setup your User](https://misp.gitbooks.io/misp-book/content/user-management/#first-run-of-the-system)
-3. [Administrate MISP](https://www.circl.lu/doc/misp/administration/)
+ล็อคอิินด้วย MISP ที่ทางสมาคมฯ ได้มอบให้:
 
 ## Password Policy 
-- [12]: Ensure that the password is at least 12 characters long
-- [A-Z]: contains at least one upper-case
-- [0-9| ]: includes a digit or a special character 
-- [a-z]: at least one lower-case character.
+- [12]: ตรวจสอบให้แน่ใจว่ารหัสผ่านมีความยาวอย่างน้อย 12 ตัว
+- [A-Z]: มีอย่างน้อยหนึ่งตัวพิมพ์ใหญ่
+- [0-9| ]: ประกอบด้วยตัวเลขหรืออักขระพิเศษ 
+- [a-z]: ตัวอักษรตัวพิมพ์เล็กอย่างน้อยหนึ่งตัว
 
 **Last Updated: April, 2018**
 
-If you need a password generator use:
+หากคุณต้องการใช้เครื่องมือช่วยตั้งรหัสผ่าน"
 - Ubuntu / Debian: [pwgen](https://linux.die.net/man/1/pwgen)
 - Website: [LastPass PW Generator](https://lastpass.com/generatepassword.php)
-- Built-in generator in Keepass* and other passwort manager
-
-**All Generator tools are only possibilities without any guarantee!**
+- Keepass* และเครื่องมือจัดการรหัสผ่านอื่น ๆ
 
 <div class="pagebreak"></div>
 
-## Create an Event
+## การสร้างเหตุการณ์
 
 ![Create an Event in MISP](figures/AddEvent.jpg)
 
-You only have to add a few pieces of information to register your Event. Further details will be specified after the Event has been added.
+คุณต้องเพิ่มข้อมูลเพียงเล็กน้อยเพื่อลงทะเบียนเหตุการณ์ของคุณ รายละเอียดเพิ่มเติมจะระบุหลังจากที่มีการเพิ่มเหตุการณ์
 
-## Describe Event
+## รายละเอียดเหตุการณ์
 
-Red is totally normal. No worries. (In future releases this will potentially change to a more harmonious color)
+ตอนนี้คุณสามารถระบุข้อมูลสำหรับกิจกรรมของคุณ
 
-![Describe Event](figures/AddEventOK.jpg)
-
-Now you can specify the information for your Event (you will need to scroll the window).
-
-### Free-Text Import Tool
+### เครื่องมือนำเข้าข้อความ
 
 ![Use Freetext import](figures/AddEventDescription.jpg)
 
-If you have a list of indicators from which you would like to quickly generate attributes then the **Free-text import tool** is
-just what you need. Simply paste your list of indicators (separated by line-breaks) into this tool.
+หากคุณมีรายการตัวชี้วัดที่คุณต้องการสร้างแอตทริบิวต์ได้อย่างรวดเร็ว ** เครื่องมือนำเข้าข้อความ ** จะช่วยทำให้ง่ายขึ้น เพียงแค่วางรายการตัวชี้วัด (คั่นด้วยการขึ้นบรรทัดใหม่) ลงในเครื่องมือนี้
 
 ![FreeText Import result](figures/FreeTextImportResult.jpg)
 
-The tool will help you to find similarities between your import and other issues already registered in MISP.
+เครื่องมือนี้จะช่วยให้คุณสามารถค้นหาความคล้ายคลึงกันระหว่างการนำเข้าและปัญหาอื่น ๆ ที่ลงทะเบียนไว้กับ MISP แล้ว
 
 ![FreeText Suggest](figures/FreeTextSuggest.jpg)
 
-For example, you can see the ID of all related Events and view their information.
+ตัวอย่างเช่นคุณสามารถดู ID ของกิจกรรมที่เกี่ยวข้องทั้งหมดและดูข้อมูลได้
 
-### Tags and Taglist
+### แท็ก และรายการแท็ก 
 
-#### Using existing Data
+#### การใช้ข้อมูลที่มีอยู่แล้ว
 
-Another easy way to add information is to use Tags. You can see the result of adding existing Tags (circl:incident-classification=XSS ans circl:incident-classification="information-leak).
+อีกวิธีหนึ่งที่ง่ายในการเพิ่มข้อมูลคือการใช้แท็ก คุณสามารถเห็นผลของการเพิ่มแท็กที่มีอยู่ (circl:incident-classification=XSS ans circl:incident-classification="information-leak).
 
 ![Add Tag](figures/SelectTag.jpg)
 
-By clicking the button, you can add more tags from an existing Taglist.
+การคลิกปุ่มนี้จะทำให้คุณสามารถเพิ่มแท็กได้จาก Tag list ที่มีอยู่
 
 ![Taglist](figures/AddEventTagsList.jpg)
 
-In particular the "Taxonomy Library: circl" Taglist is very complete, as you can see:
+โดยเฉพาะอย่างยิ่ง "Taxonomy Library: circl" แท็กจะสมบูรณ์มากตามที่คุณเห็น:
 
 ![Select Tag from Taglis](figures/AddEventSelectTag.jpg)
 
-#### Make your own Taglist
+#### สร้าง Taglist ของคุณเอง
 
-If you want make your own Taglist, select Add Tag.
+ถ้าคุณต้องการสร้าง Tag list ของคุณเองให้เลือก Add Tag
 
 ![Select Add New Tag](figures/SelectAddNewTag.jpg)
 
-You will see the following window:
+คุณจะเห็นหน้าต่างต่อไปนี้:
 
 ![Define Tag](figures/AddTag.jpg)
 
-Then, when you add the new tag it will appear in the Custom Taglist.
+จากนั้นเมื่อคุณเพิ่มแท็กใหม่จะปรากฏใน Tag รายการที่กำหนดเอง
 
-### Suggestions
+### ข้อเสนอแนะ
 
-The following attribute types should be added for each Event:
-- ip-src: source IP of attacker
-- email-src: email used to send malware
-- md5/sha1/sha256: checksum
-- Hostname: full host/dnsname of attacker
-- Domain: domain name used in malware
+ควรเพิ่มแอตทริบิวต์ประเภทต่อไปนี้สำหรับแต่ละเหตุการณ์:
+- ip-src: IP ต้นทางของผู้โจมตี
+- email-src: อีเมลที่ใช้ส่งมัลแวร์
+- md5 / sha1 / sha256: checksum
+- ชื่อโฮสต์: โฮสต์เต็ม / dnsname ของผู้โจมตี
+- โดเมน: ชื่อโดเมนที่ใช้ในมัลแวร์
 
-## Browsing Events
-To see your Event, select List Events from the menu Events Action. You can click any row and select a filter.
+## เรียกดูเหตุการณ์
+หากต้องการดูเหตุการณ์ของคุณให้เลือกรายการเหตุการณ์จากเมนู Event Action คุณสามารถคลิกแถวใดก็ได้และเลือกตัวกรอง
 
 ![Browsing Events](figures/ListEvents.png)
 
-If you click on your Event's number, you can see all the information related to your Event.
+หากคุณคลิกหมายเลขเหตุการณ์คุณสามารถดูข้อมูลทั้งหมดที่เกี่ยวข้องกับเหตุการณ์ได้
 
 ![See Event](figures/SeeEvent.jpg)
 
-## Export Events for Log Search
+## การส่งออกเหตุการณ์ สำหรับการค้นหาบันทึกเหตุกรณ์
 
-Export functionality is designed to automatically generate signatures for intrusion detection systems. To enable signature generation for a given attribute, the Signature field of this attribute must be set to Yes. Note that not all attribute types are applicable for signature generation, currently we only support NIDS signature generation for IP, domains, host names, user agents etc., and hash list generation for MD5/SHA1 values of file artifacts. Support for more attribute types is planned.
+ฟังก์ชันการส่งออกถูกออกแบบมาเพื่อสร้างลายเซ็นอัตโนมัติสำหรับระบบตรวจจับการบุกรุก เมื่อต้องการเปิดใช้งานการสร้างลายเซ็นสำหรับแอตทริบิวต์ที่ระบุฟิลด์ลายเซ็นต์ของแอ็ตทริบิวต์นี้ต้องตั้งค่าเป็นใช่ โปรดทราบว่าไม่ใช่ประเภทแอตทริบิวต์ทั้งหมดที่ใช้ได้สำหรับการสร้างลายเซ็น แต่ขณะนี้เราสนับสนุนเฉพาะลายเซ็น NIDS สำหรับ IP โดเมนชื่อโฮสต์ตัวแทนผู้ใช้ ฯลฯ และการสร้างรายการแฮชสำหรับค่าของ MD5 / SHA1 ของสิ่งประดิษฐ์ไฟล์ มีการวางแผนการสนับสนุนประเภทแอตทริบิวต์เพิ่มเติม
 
 ![Quick Export](figures/Export.jpg)
 
-Simply click on any of the following buttons to download the appropriate data for log correlation.
+เพียงแค่คลิกที่ปุ่มต่อไปนี้เพื่อดาวน์โหลดข้อมูลที่เหมาะสมสำหรับความสัมพันธ์บันทึกเหตุการณ์
 
 ![Select Format](figures/SelectExport.jpg)
